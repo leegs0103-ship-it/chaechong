@@ -1,0 +1,944 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>채권총론 필수 암기 (기말)</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+
+/* Layout: 단일 읽기 칼럼 + 상단 고정 목차 칩. 원문 문장은 그대로, 판례는 띠지 박스, 도식은 판례 바로 아래. */
+:root{
+  --bg:#f6f7f9; --paper:#ffffff; --ink:#1b2430; --muted:#5b6676; --line:#d9dee6;
+  --accent:#2c4f7c; --accent-soft:#e6edf7; --mark:#fbe7a6; --markline:#c9951a;
+  --yes:#1d7a4c; --yes-soft:#e3f3ea; --no:#b23a3a; --no-soft:#f8e4e4;
+  --pc:#f2f0fa; --pcline:#6b5bb5; --star:#d08a00; --kwbg:#dfe4ec;
+  --f-display:"Gowun Batang","Noto Serif KR",serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12161c; --paper:#1a2029; --ink:#e4e8ee; --muted:#9aa5b4; --line:#2e3744;
+  --accent:#8fb3e6; --accent-soft:#1f2c3e; --mark:#5a4612; --markline:#e0b246;
+  --yes:#6fcf9d; --yes-soft:#16302a; --no:#f08c8c; --no-soft:#3a1d20;
+  --pc:#211f33; --pcline:#a99be8; --star:#f2b84b; --kwbg:#323c4b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12161c; --paper:#1a2029; --ink:#e4e8ee; --muted:#9aa5b4; --line:#2e3744;
+  --accent:#8fb3e6; --accent-soft:#1f2c3e; --mark:#5a4612; --markline:#e0b246;
+  --yes:#6fcf9d; --yes-soft:#16302a; --no:#f08c8c; --no-soft:#3a1d20;
+  --pc:#211f33; --pcline:#a99be8; --star:#f2b84b; --kwbg:#323c4b; color-scheme:dark}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.75;word-break:keep-all;overflow-wrap:anywhere}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+.top-in{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:8px;display:flex;flex-direction:column;gap:6px}
+.toc{display:flex;gap:6px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+.toc a{flex:none;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:13px;white-space:nowrap;background:var(--bg)}
+.toc a em{font-style:normal;color:var(--star);font-size:11px;margin-left:3px;letter-spacing:-1px}
+.toc a:hover,.toc a:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.tools{display:flex;gap:6px 8px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--muted)}
+.tools button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:6px;padding:2px 10px;cursor:pointer}
+.tools button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.tools button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+main{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 80px}
+header.doc h1{font-family:var(--f-display);font-size:30px;line-height:1.3;margin:0;text-wrap:balance}
+header.doc .sub{font-family:var(--f-display);font-size:20px;color:var(--accent);margin:2px 0 14px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--muted);margin-bottom:8px;align-items:center}
+.legend>span{display:inline-flex;align-items:center;gap:6px}
+.imp-map{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px 12px;font-size:13px;margin:8px 0 4px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.imp-map a{color:var(--ink);text-decoration:none;display:flex;justify-content:space-between;gap:6px}
+.imp-map a:hover{color:var(--accent)}
+
+section.s{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px clamp(14px,3vw,28px) 22px;margin-top:18px;scroll-margin-top:120px}
+section.s h2{font-family:var(--f-display);font-size:22px;line-height:1.4;margin:0 0 12px;text-wrap:balance;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+section.s h2 .no{color:var(--accent);flex:none}
+.imp{font-family:var(--f-body);font-size:15px;color:var(--star);letter-spacing:1px;white-space:nowrap}
+.imp .off{color:var(--line)}
+h3{font-size:16.5px;margin:22px 0 6px;font-weight:700}
+h3:first-of-type{margin-top:6px}
+h4{font-size:15.5px;margin:14px 0 4px;font-weight:600;padding-left:6px}
+p{margin:4px 0}
+ul.d{list-style:none;padding:0;margin:4px 0 4px 6px}
+ul.d>li{position:relative;padding-left:16px;margin:3px 0}
+ul.d>li::before{content:"–";position:absolute;left:0;color:var(--muted)}
+ul.k{list-style:none;padding:0;margin:4px 0 4px 6px}
+ul.k>li{margin:3px 0}
+b,strong{font-weight:700}
+.sm{font-size:13px;color:var(--muted)}
+.cf{color:var(--muted)}
+.then{display:block;padding-left:20px;margin:3px 0}
+u.m{background:linear-gradient(transparent 58%,var(--mark) 58%);color:inherit;text-decoration:underline;text-decoration-color:var(--markline);text-underline-offset:3px}
+.tag{display:inline-block;font-size:12px;font-weight:700;border-radius:4px;padding:0 6px;margin-right:6px;line-height:1.6;vertical-align:1px}
+.tag.w{background:var(--no-soft);color:var(--no)}
+.tag.s{background:var(--yes-soft);color:var(--yes)}
+
+/* 핵심어 */
+b.kw{font-weight:700;color:var(--accent);border-bottom:1.5px dotted var(--accent)}
+body.hide-kw b.kw{color:transparent;background:var(--kwbg);border-bottom:1.5px dashed var(--muted);border-radius:3px;cursor:pointer;text-decoration-color:transparent}
+body.hide-kw b.kw *{color:transparent!important}
+body.hide-kw b.kw.peek,body.hide-kw b.kw.peek *{color:var(--accent)!important;background:transparent}
+
+/* 판례 박스 */
+.pc{background:var(--pc);border-left:3px solid var(--pcline);border-radius:0 8px 8px 0;padding:8px 12px;margin:8px 0}
+.pc .lb{display:inline-block;font-size:12px;font-weight:700;color:var(--paper);background:var(--pcline);border-radius:4px;padding:0 7px;margin-right:6px;line-height:1.7;vertical-align:1px}
+body.hide-pc .pc .body{filter:blur(5px);cursor:pointer;user-select:none}
+body.hide-pc .pc .body.peek{filter:none;user-select:auto}
+body.hide-u u.m{color:transparent;background:var(--mark);cursor:pointer;border-radius:2px}
+body.hide-u u.m *{color:transparent!important}
+body.hide-u u.m.peek{color:inherit;background:linear-gradient(transparent 58%,var(--mark) 58%)}
+body.hide-u u.m.peek *{color:inherit!important}
+
+/* 도식 공통 */
+figure.dg{margin:12px 0 16px;border:1px dashed var(--accent);border-radius:10px;background:var(--bg);padding:12px 14px 14px}
+figure.dg figcaption{font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:.02em;margin-bottom:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ex{font-size:11.5px;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 8px;background:var(--paper)}
+.flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.who{border:1.5px solid var(--ink);background:var(--paper);border-radius:8px;padding:6px 12px;font-weight:600;text-align:center;line-height:1.4;font-size:14px;flex:0 1 auto;min-width:0}
+.who small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.box{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:7px 10px;font-size:13.5px;line-height:1.5;min-width:0}
+.arr{display:flex;flex-direction:column;align-items:stretch;font-size:12px;color:var(--muted);min-width:72px;flex:1 1 90px;text-align:center;line-height:1.35}
+.arr i{display:block;height:0;border-top:1.5px solid var(--muted);position:relative;margin:4px 0}
+.arr i::after{content:"";position:absolute;right:-1px;top:-6px;border:5px solid transparent;border-left:8px solid var(--muted)}
+.arr i.l::after{right:auto;left:-1px;border-left:5px solid transparent;border-right:8px solid var(--muted)}
+.arr .mid{color:var(--accent);font-weight:700;font-size:12.5px}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.four{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px}
+.panel{border:1px solid var(--line);background:var(--paper);border-radius:8px;padding:10px 12px;min-width:0}
+.panel h5{margin:0 0 6px;font-size:13.5px}
+.panel.y{border-color:var(--yes)}
+.panel.n{border-color:var(--no)}
+.panel .verdict{font-size:12px;font-weight:700;border-radius:4px;padding:0 6px;display:inline-block;margin-bottom:4px}
+.panel.y .verdict{background:var(--yes-soft);color:var(--yes)}
+.panel.n .verdict{background:var(--no-soft);color:var(--no)}
+.panel.a .verdict{background:var(--accent-soft);color:var(--accent)}
+.chip{display:inline-block;font-size:12.5px;border-radius:999px;padding:1px 9px;margin:2px 3px 2px 0;line-height:1.6}
+.chip.y{background:var(--yes-soft);color:var(--yes)}
+.chip.n{background:var(--no-soft);color:var(--no)}
+.chip.c{background:var(--accent-soft);color:var(--accent)}
+.bar{display:flex;min-height:32px;border-radius:6px;overflow:hidden;border:1px solid var(--line);font-size:12px;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.bar>div{display:flex;align-items:center;justify-content:center;padding:2px 4px;text-align:center;line-height:1.25;border-right:1px solid var(--line);min-width:0}
+.bar>div:last-child{border-right:0}
+.bar .hl{background:var(--accent);color:var(--paper);font-weight:600}
+.bar .hl2{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.bar .df{background:var(--no-soft);color:var(--no);font-weight:600}
+.bar .ok{background:var(--yes-soft);color:var(--yes);font-weight:600}
+.bar .pl{background:var(--paper);color:var(--muted)}
+.brace{display:flex;font-size:12px;font-weight:600;margin-top:2px}
+.brace>div{border:1.5px solid currentColor;border-top:0;height:8px;border-radius:0 0 6px 6px}
+.brace-lb{font-size:12px;font-weight:600;text-align:center;margin-top:2px}
+.brk{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:4px}
+.down{display:flex;justify-content:center;color:var(--muted);font-size:12.5px;margin:6px 0;text-align:center}
+.q{border:1.5px solid var(--accent);border-radius:8px;padding:6px 12px;background:var(--accent-soft);font-size:13.5px;font-weight:600;text-align:center}
+.yesno{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.yesno>div{border-radius:8px;padding:8px 10px;font-size:13.5px;line-height:1.55;min-width:0}
+.yesno .yy{background:var(--yes-soft);border:1px solid var(--yes)}
+.yesno .nn{background:var(--no-soft);border:1px solid var(--no)}
+.yesno .aa{background:var(--accent-soft);border:1px solid var(--accent)}
+.yesno b.h{display:block;font-size:12.5px;margin-bottom:2px}
+.formula{font-variant-numeric:tabular-nums;font-weight:700;font-size:14.5px}
+.calc{font-variant-numeric:tabular-nums;font-size:13px;margin-top:6px;padding:6px 8px;border-radius:6px;background:var(--bg);border:1px solid var(--line)}
+.steps{display:grid;gap:8px;counter-reset:st}
+.st{display:grid;grid-template-columns:26px 1fr;gap:8px;align-items:start}
+.st>.n{width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--paper);font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.st>div:last-child{min-width:0}
+.cond{display:grid;gap:4px;margin:4px 0}
+.cond>div{display:flex;gap:6px;align-items:flex-start;font-size:13px;line-height:1.5}
+.cond>div::before{content:"✓";color:var(--yes);font-weight:700;flex:none}
+.and{font-size:11.5px;color:var(--muted);font-weight:700;padding-left:18px}
+
+/* 타임라인 */
+.tl{position:relative;display:grid;grid-template-columns:62% 38%;margin:30px 0 30px;font-size:12.5px}
+.tl .done{background:var(--accent);color:var(--paper);padding:8px;border-radius:6px 0 0 6px;text-align:center;font-weight:600;line-height:1.45}
+.tl .undone{background:repeating-linear-gradient(45deg,var(--no-soft) 0 8px,var(--paper) 8px 16px);color:var(--no);padding:8px;border:1px dashed var(--no);border-left:0;border-radius:0 6px 6px 0;text-align:center;font-weight:600;line-height:1.45}
+.tl .cut{position:absolute;left:62%;top:-24px;bottom:-24px;border-left:2px solid var(--ink)}
+.tl .cut span{position:absolute;top:0;left:6px;white-space:nowrap;font-weight:700;font-size:12px}
+.tl .ends{position:absolute;bottom:-22px;left:0;right:0;display:flex;justify-content:space-between;color:var(--muted);font-size:12px}
+/* 레인 */
+.lanes{display:grid;grid-template-columns:minmax(110px,30%) 1fr 1fr;gap:4px;font-size:12.5px;align-items:stretch}
+.lanes>div{padding:6px 8px;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;line-height:1.35;min-width:0}
+.lanes .hd{font-weight:700;color:var(--muted);background:transparent}
+.lanes .nm{align-items:flex-start;font-weight:600;background:var(--paper);border:1px solid var(--line);text-align:left}
+.lanes .o{background:var(--yes-soft);color:var(--yes);font-weight:700}
+.lanes .x{background:var(--no-soft);color:var(--no);font-weight:700}
+.meter{display:flex;gap:3px;margin-top:4px}
+.meter i{width:16px;height:8px;border-radius:2px;background:var(--line)}
+.meter i.on{background:var(--accent)}
+
+/* 표 */
+.tbl{overflow-x:auto;margin:8px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px;line-height:1.5}
+th,td{border:1px solid var(--line);padding:8px 8px;text-align:center;vertical-align:middle}
+thead th{background:var(--accent-soft);color:var(--ink)}
+tbody th{background:var(--bg);font-weight:700}
+td .sm{display:block}
+td.x{color:var(--no);font-weight:700}
+td.o{color:var(--yes);font-weight:700}
+
+.foot{margin-top:24px;font-size:12.5px;color:var(--muted);text-align:center}
+@media (max-width:520px){
+  body{font-size:15px}
+  header.doc h1{font-size:25px}
+  section.s h2{font-size:19px}
+  .yesno{grid-template-columns:1fr}
+  .tl{grid-template-columns:56% 44%}
+  .tl .cut{left:56%}
+  .flow.nw{flex-wrap:nowrap}
+}
+.part{margin-top:34px;scroll-margin-top:120px}
+.part>h2.pt{font-family:var(--f-display);font-size:24px;line-height:1.35;margin:0 0 4px;padding:10px 16px;border-radius:10px;background:var(--accent);color:var(--paper);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;text-wrap:balance}
+.part>h2.pt .imp{color:var(--mark)}
+.part>h2.pt .imp .off{color:rgba(255,255,255,.3)}
+section.s.nohead{padding-top:16px}
+.ln,.pc,h3,h4{margin-left:var(--ind,0px)}
+h3{margin-top:18px}
+h3.h-roman{font-family:var(--f-display);font-size:18px;color:var(--accent)}
+p.ln{margin:3px 0}
+p.ln.d{position:relative;padding-left:16px}
+p.ln.d::before{content:"–";position:absolute;left:0;color:var(--muted)}
+p.ln.star,p.ln.arrow{color:var(--ink)}
+p.ln.kor,p.ln.pp{padding-left:2px}
+.pc .dsh{display:none}
+.pc{margin-left:calc(var(--ind,0px));}
+.ix{margin:6px 0 4px;border:1px solid var(--line);border-radius:10px;background:var(--paper)}
+.ix>summary{cursor:pointer;padding:8px 12px;font-weight:600;font-size:14px;list-style-position:inside}
+.ix-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:2px 16px;padding:4px 12px 12px;font-size:13px;max-height:60vh;overflow:auto}
+.ix-grid a{color:var(--ink);text-decoration:none;display:flex;justify-content:space-between;gap:8px;padding:2px 0;border-bottom:1px dotted var(--line);min-width:0}
+.ix-grid a span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.ix-grid a:hover{color:var(--accent)}
+.ix-part{grid-column:1/-1;font-weight:700;color:var(--accent);margin-top:8px;font-size:13px}
+.flt{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.flt button{border:0!important;border-radius:0!important;border-right:1px solid var(--line)!important}
+.flt button:last-child{border-right:0!important}
+.hide-imp{display:none!important}
+.counts{font-size:12.5px;color:var(--muted)}
+table td,table th{word-break:keep-all}
+td .cl{margin:1px 0}
+td{text-align:center}
+.tbl.in{margin:6px 0}
+.tbl.in table{min-width:0;font-size:13px}
+td:has(> .cl + .cl){text-align:left}
+tr:first-child td{background:var(--accent-soft);font-weight:600}
+.tbl.in tr:first-child td{background:transparent;font-weight:inherit}
+td .sm{display:inline}
+figure.dg > div + div{margin-top:8px}
+.flow.nw:has(> :nth-child(6)){flex-wrap:wrap}
+/* Claude 추가 내용 (접기) */
+details.add{margin:10px 0 14px;border:1px solid var(--addline);border-left:4px solid var(--add);border-radius:8px;background:var(--addbg)}
+details.add>summary{cursor:pointer;padding:7px 12px;font-size:13.5px;font-weight:700;color:var(--add);list-style:none;display:flex;gap:8px;align-items:center}
+details.add>summary::-webkit-details-marker{display:none}
+details.add>summary::before{content:"▸";transition:transform .15s;display:inline-block}
+details.add[open]>summary::before{transform:rotate(90deg)}
+details.add>summary:focus-visible{outline:2px solid var(--add);outline-offset:2px}
+.addtag{font-size:11.5px;font-weight:700;color:var(--paper);background:var(--add);border-radius:4px;padding:0 6px;line-height:1.7;flex:none}
+.addtag.c{background:var(--pcline)}
+.addtag.k{background:var(--star)}
+details.add>.supbody,details.add>figure.dg{margin:0 12px 12px}
+details.add>figure.dg{border-style:solid}
+.supbody{font-size:14.5px;line-height:1.75}
+.supbody p{margin:4px 0}
+.supbody ul{margin:4px 0;padding-left:20px}
+.supbody li{margin:2px 0}
+.supbody .pc{margin:6px 0}
+.supbody h6{font-size:13.5px;margin:10px 0 2px;color:var(--ink)}
+.supbody table{min-width:0}
+details.add.sum{border-left-color:var(--star)}
+details.add.sum>summary{color:var(--star)}
+body.orig-only details.add{display:none!important}
+:root{--add:#1f7a74;--addbg:#f1f8f7;--addline:#cfe5e2}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--add:#5fc7bd;--addbg:#14221f;--addline:#24413c}}
+:root[data-theme="dark"]{--add:#5fc7bd;--addbg:#14221f;--addline:#24413c}
+details.dgw>figure.dg>figcaption{display:none}
+.lead{font-size:14.5px;line-height:1.75;margin:0 0 10px;color:var(--ink)}
+figure.dg .lead{font-size:14px}
+.tip{margin:10px 0 2px;padding:8px 12px;border-radius:8px;background:var(--paper);border:1px dashed var(--star);font-size:13.5px;line-height:1.65}
+.tip b{color:var(--star);margin-right:4px}
+.case{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin:10px 0;overflow:hidden}
+.case .ct{font-weight:700;font-size:14px;padding:8px 12px;background:var(--pc);border-bottom:1px solid var(--line)}
+.case .cr{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:7px 12px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.7}
+.case .cr:last-child{border-bottom:0}
+.case .ck{font-size:12px;font-weight:700;color:var(--pcline);padding-top:2px}
+.case .cv{min-width:0}
+.terms{display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;margin:6px 0;font-size:14px;line-height:1.65}
+.terms dt{font-weight:700;color:var(--add)}
+.terms dd{margin:0}
+@media (max-width:520px){.case .cr{grid-template-columns:1fr;gap:2px}.terms{grid-template-columns:1fr}.terms dd{margin-bottom:6px}}
+.panel .brk{font-size:13.5px;line-height:1.65;color:var(--ink)}
+
+.case .cno{display:block;font-weight:500;font-size:12px;color:var(--pcline);margin-top:2px;letter-spacing:0}
+.cno.in{display:inline-block;font-size:12px;font-weight:500;color:var(--pcline);margin-left:4px;white-space:normal}
+.relwrap{margin:6px 0 10px}
+.relsvg{display:block;width:100%;max-width:440px;height:auto;margin:0 auto;font-family:var(--f-body)}
+.relsvg .rn{fill:var(--paper);stroke:var(--ink);stroke-width:1.4}
+.relsvg .rn.hl{stroke:var(--accent);stroke-width:2;fill:var(--accent-soft)}
+.relsvg .rn.y{stroke:var(--yes);fill:var(--yes-soft)}
+.relsvg .rn.n{stroke:var(--no);fill:var(--no-soft)}
+.relsvg .rt{font-size:14px;font-weight:700;fill:var(--ink)}
+.relsvg .rs{font-size:11.5px;fill:var(--muted)}
+.relsvg .re{stroke-width:1.8;fill:none}
+.relsvg .re.k{stroke:var(--ink)}
+.relsvg .re.m{stroke:var(--accent);stroke-width:2.4}
+.relsvg .re.y{stroke:var(--yes);stroke-dasharray:6 4;stroke-width:2}
+.relsvg .re.n{stroke:var(--no);stroke-dasharray:6 4;stroke-width:2}
+.relsvg .re.q{stroke:var(--markline);stroke-dasharray:6 4;stroke-width:2}
+.relsvg .rm.k{fill:var(--ink)}.relsvg .rm.m{fill:var(--accent)}.relsvg .rm.y{fill:var(--yes)}.relsvg .rm.n{fill:var(--no)}.relsvg .rm.q{fill:var(--markline)}
+.relsvg .rl{font-size:13px;font-weight:600;paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
+.relsvg .rl.k{fill:var(--ink)}.relsvg .rl.m{fill:var(--accent)}.relsvg .rl.y{fill:var(--yes)}.relsvg .rl.n{fill:var(--no)}.relsvg .rl.q{fill:var(--markline)}
+.rlg{display:flex;flex-wrap:wrap;gap:4px 14px;justify-content:center;font-size:12px;color:var(--muted);margin-top:4px}
+.rlg .lg i{display:inline-block;width:22px;height:0;border-top:2px solid;vertical-align:middle;margin-right:5px}
+.rlg .lg-k i{border-color:var(--ink)}.rlg .lg-m i{border-color:var(--accent);border-top-width:3px}
+.rlg .lg-y i{border-top-style:dashed;border-color:var(--yes)}.rlg .lg-n i{border-top-style:dashed;border-color:var(--no)}.rlg .lg-q i{border-top-style:dashed;border-color:var(--markline)}
+.relcap{font-size:13px;color:var(--muted);text-align:center;margin:4px 0 0}
+.relkey{list-style:none;margin:8px auto 0;padding:8px 12px;max-width:520px;font-size:13.5px;line-height:1.6;border-top:1px solid var(--line)}
+.relkey li{margin:2px 0}
+
+/* ---- 충북대학교 버건디(로고 색 #B72654 · PANTONE 7425C) · 아이보리 테마 ---- */
+:root{
+  --cbnu:#b72654;
+  --bg:#f7f3e8; --paper:#fffdf7; --ink:#2a2124; --muted:#6f6266; --line:#e5dccb;
+  --accent:#b72654; --accent-soft:#f8e6ec; --brand:#b72654; --brand-deep:#b72654;
+  --pc:#faf0f3; --pcline:#b72654; --kwbg:#e9e1d3;
+  --add:#7a5f22; --addbg:#faf5e8; --addline:#e6d9b8;
+  --f-cute:"Jua","IBM Plex Sans KR","Apple SD Gothic Neo",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#1a1517; --paper:#231c1f; --ink:#ede6e0; --muted:#aba0a3; --line:#3a3034;
+  --accent:#dc6088; --accent-soft:#3a1f29; --brand:#b72654; --brand-deep:#dc6088;
+  --pc:#2a1f25; --pcline:#dc6088; --kwbg:#3a3236;
+  --add:#d9bc7a; --addbg:#211c14; --addline:#40361f}}
+:root[data-theme="dark"]{
+  --bg:#1a1517; --paper:#231c1f; --ink:#ede6e0; --muted:#aba0a3; --line:#3a3034;
+  --accent:#dc6088; --accent-soft:#3a1f29; --brand:#b72654; --brand-deep:#dc6088;
+  --pc:#2a1f25; --pcline:#dc6088; --kwbg:#3a3236;
+  --add:#d9bc7a; --addbg:#211c14; --addline:#40361f}
+
+/* 로고 배너: 로고와 같은 버건디 바탕 + 흰색 엠블럼 */
+.top{border-top:3px solid var(--cbnu)}
+.brand{display:flex;align-items:center;gap:16px;margin:0 0 20px;padding:16px 20px;border-radius:14px;background:var(--cbnu);color:#fff}
+.brand-logo{flex:none;width:58px;height:70px;display:flex;align-items:center;justify-content:center}
+.brand-logo svg{width:100%;height:100%;display:block}
+.brand-logo svg path{fill:#fff}
+.brand-txt{display:flex;flex-direction:column;gap:4px;min-width:0}
+.brand-school{font-family:var(--f-cute);font-weight:400;font-size:21px;color:#fff;letter-spacing:.01em;line-height:1.25}
+.brand-author{font-size:14px;color:rgba(255,255,255,.85)}
+.brand-author b{color:#fff;font-weight:700}
+
+/* 제목 글꼴: Jua */
+header.doc h1{font-family:var(--f-cute);font-weight:400;font-size:34px;letter-spacing:.01em;line-height:1.35;color:var(--brand-deep)}
+header.doc .sub{font-family:var(--f-cute);font-weight:400;font-size:20px;color:var(--brand-deep)}
+.part>h2.pt{font-family:var(--f-cute);font-weight:400;font-size:26px;background:var(--cbnu);color:#fff}
+section.s{border-top:3px solid var(--cbnu)}
+section.s h2{font-family:var(--f-cute);font-weight:400;font-size:23px}
+section.s h2 .no{color:var(--brand-deep)}
+.tools button[aria-pressed="true"]{background:var(--cbnu);border-color:var(--cbnu);color:#fff}
+.ink-bar .done{background:var(--cbnu);border-color:var(--cbnu);color:#fff}
+@media (max-width:520px){header.doc h1{font-size:28px}.brand{padding:14px 16px;gap:12px}.brand-logo{width:48px;height:58px}.brand-school{font-size:18px}}
+/* 채움·테두리는 다크 모드에서도 로고 색 그대로 */
+.pc{border-left-color:var(--cbnu)}
+.pc .lb,.addtag.c{background:var(--cbnu);color:#fff}
+figure.dg{border-color:var(--cbnu)}
+.top{border-top-color:var(--cbnu)}
+
+</style>
+
+<div class="top"><div class="top-in">
+  <nav class="toc" aria-label="목차"><a href="#p1">수인의 채권ㆍ채무관계</a></nav>
+  <div class="tools">
+    <span>암기 점검</span>
+    <button type="button" id="t-kw" aria-pressed="false">핵심어 가리기</button>
+    <button type="button" id="t-u" aria-pressed="false">밑줄 가리기</button>
+    <button type="button" id="t-pc" aria-pressed="false">판례 가리기</button>
+    <span class="flt" role="group" aria-label="중요도 필터">
+      <button type="button" data-min="1" aria-pressed="true">전체</button>
+      <button type="button" data-min="2" aria-pressed="false">★★ 이상</button>
+      <button type="button" data-min="3" aria-pressed="false">★★★만</button>
+    </span>
+    <span class="flt" role="group" aria-label="Claude 추가 내용">
+  <button type="button" id="add-open">추가 모두 펼치기</button>
+  <button type="button" id="add-close">추가 모두 접기</button>
+  <button type="button" id="add-hide" aria-pressed="false">원문만 보기</button>
+</span>
+<script>
+(function(){
+  function all(){return document.querySelectorAll('details.add')}
+  document.getElementById('add-open').addEventListener('click',function(){all().forEach(function(d){d.open=true})});
+  document.getElementById('add-close').addEventListener('click',function(){all().forEach(function(d){d.open=false})});
+  var h=document.getElementById('add-hide');
+  function set(on){document.body.classList.toggle('orig-only',on);h.setAttribute('aria-pressed',on?'true':'false');try{localStorage.setItem('orig-only',on?'1':'0')}catch(e){}}
+  var init=false;try{init=localStorage.getItem('orig-only')==='1'}catch(e){}
+  h.addEventListener('click',function(){set(!document.body.classList.contains('orig-only'))});
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){set(init)});else set(init);
+})();
+</script>
+  </div>
+</div></div>
+
+<main>
+<header class="doc">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap"><div class="brand"><span class="brand-logo" role="img" aria-label="충북대학교 로고"><svg xmlns="http://www.w3.org/2000/svg" viewBox="372 243 96 115" aria-hidden="true" focusable="false"><path fill="#B72654" d="M 445.00 304.07 C 437.30 301.21 431.80 294.75 429.00 287.03 C 435.05 287.29 440.42 287.69 446.33 288.41 C 446.33 295.55 446.18 298.63 445.00 304.07 M 420.10 335.56 C 412.50 332.61 405.43 327.12 399.99 317.04 C 407.96 314.01 415.03 308.27 420.10 299.61 C 425.18 308.27 432.25 314.01 440.22 317.04 C 434.78 327.12 427.71 332.61 420.10 335.56 M 395.21 304.07 C 394.03 298.63 393.87 295.55 393.87 288.41 C 399.79 287.69 405.16 287.29 411.19 287.03 C 408.41 294.75 402.91 301.21 395.21 304.07 M 458.74 269.21 L 458.57 269.16 C 454.76 268.22 450.92 267.42 447.07 266.77 C 446.69 266.71 446.33 267.00 446.33 267.39 L 446.33 273.47 C 446.33 274.50 445.44 275.30 444.42 275.19 L 444.41 275.19 C 438.61 274.55 432.80 274.13 426.99 273.95 L 426.99 265.39 C 426.99 264.96 426.66 264.62 426.23 264.60 C 425.07 264.56 422.72 264.48 420.10 264.48 C 417.49 264.48 415.14 264.56 413.98 264.60 C 413.55 264.62 413.22 264.96 413.22 265.39 L 413.22 273.95 C 407.55 274.13 401.87 274.52 396.22 275.14 C 396.07 275.16 395.93 275.17 395.79 275.19 L 395.77 275.19 C 394.76 275.30 393.87 274.51 393.87 273.5 L 393.87 267.58 C 393.87 267.09 393.44 266.72 392.96 266.80 C 389.17 267.45 385.39 268.23 381.65 269.16 L 381.46 269.21 C 381.12 269.30 380.87 269.61 380.87 269.97 L 380.87 292.15 C 380.88 296.27 381.30 300.33 382.11 304.29 C 382.67 307.07 383.42 309.79 384.34 312.44 C 387.55 322.53 393.50 331.46 401.43 338.19 C 406.85 343.02 413.15 346.84 420.10 349.32 C 427.07 346.84 433.36 343.02 438.78 338.19 C 446.71 331.46 452.66 322.53 455.87 312.44 C 456.79 309.79 457.54 307.07 458.10 304.29 C 458.91 300.33 459.33 296.27 459.34 292.15 L 459.34 269.97 C 459.34 269.60 459.09 269.29 458.74 269.21 "/><path fill="#B72654" d="M 386.53 263.24 C 385.26 261.53 384 259.84 382.73 258.17 L 382.73 264.12 C 382.11 264.27 381.49 264.42 380.87 264.58 L 380.87 254.89 C 381.42 254.75 381.98 254.61 382.53 254.48 C 383.80 256.14 385.06 257.83 386.32 259.53 L 386.32 253.60 C 386.95 253.46 387.57 253.33 388.20 253.20 L 388.20 262.89 C 387.64 263.00 387.08 263.12 386.53 263.24 "/><path fill="#B72654" d="M 394.41 254.17 C 394.13 253.90 393.71 253.76 393.19 253.85 C 392.68 253.94 392.25 254.23 391.98 254.59 C 391.61 255.06 391.51 255.53 391.51 257.39 C 391.51 259.26 391.61 259.69 391.98 260.03 C 392.25 260.30 392.68 260.42 393.19 260.33 C 393.71 260.24 394.13 259.97 394.41 259.61 C 394.77 259.14 394.88 258.67 394.88 256.81 C 394.88 254.95 394.77 254.51 394.41 254.17 M 395.80 260.53 C 395.12 261.32 394.30 261.83 393.19 262.02 C 392.10 262.21 391.26 261.98 390.58 261.43 C 389.61 260.64 389.64 259.43 389.64 257.75 C 389.64 256.08 389.61 254.87 390.58 253.70 C 391.26 252.90 392.10 252.36 393.19 252.17 C 394.30 251.98 395.12 252.23 395.80 252.80 C 396.78 253.63 396.77 254.85 396.77 256.52 C 396.77 258.19 396.78 259.40 395.80 260.53 "/><path fill="#B72654" d="M 401.70 260.70 C 401.23 260.76 400.75 260.82 400.28 260.88 C 399.21 257.78 398.14 254.70 397.08 251.63 C 397.73 251.53 398.39 251.44 399.04 251.35 C 399.69 253.37 400.34 255.39 400.99 257.41 C 401.64 255.23 402.29 253.05 402.94 250.87 C 403.60 250.80 404.26 250.73 404.92 250.67 C 403.85 254.00 402.77 257.35 401.70 260.70 "/><path fill="#B72654" d="M 408.25 253.24 C 407.83 254.45 407.42 255.66 407.01 256.86 C 407.82 256.80 408.63 256.73 409.44 256.68 C 409.04 255.53 408.64 254.39 408.25 253.24 M 410.52 259.92 C 410.33 259.36 410.13 258.80 409.94 258.24 C 408.79 258.31 407.63 258.40 406.48 258.50 C 406.28 259.09 406.09 259.68 405.89 260.27 C 405.23 260.33 404.57 260.39 403.91 260.46 C 405.09 257.11 406.27 253.77 407.45 250.44 C 407.95 250.41 408.44 250.37 408.94 250.33 C 410.13 253.48 411.32 256.64 412.50 259.81 C 411.84 259.84 411.18 259.88 410.52 259.92 "/><path fill="#B72654" d="M 420.03 252.80 C 419.62 253.97 419.21 255.15 418.80 256.32 C 419.61 256.32 420.42 256.32 421.23 256.32 C 420.83 255.15 420.43 253.97 420.03 252.80 M 422.31 259.64 C 422.12 259.07 421.92 258.49 421.73 257.92 C 420.58 257.91 419.42 257.91 418.26 257.92 C 418.07 258.5 417.87 259.07 417.67 259.64 C 417.01 259.66 416.35 259.67 415.69 259.69 C 416.87 256.42 418.05 253.17 419.24 249.94 C 419.73 249.94 420.23 249.94 420.73 249.94 C 421.92 253.17 423.11 256.42 424.30 259.68 C 423.64 259.66 422.97 259.65 422.31 259.64 "/><path fill="#B72654" d="M 428.92 251.87 C 428.32 251.84 427.73 251.81 427.14 251.78 L 427.14 254.43 C 427.73 254.46 428.32 254.49 428.92 254.52 C 429.78 254.57 430.33 254.08 430.33 253.29 C 430.33 252.50 429.78 251.92 428.92 251.87 M 429.01 256.23 C 428.39 256.19 427.76 256.16 427.14 256.14 L 427.14 259.78 C 426.50 259.75 425.87 259.73 425.23 259.71 L 425.23 250.02 C 426.49 250.06 427.75 250.12 429.01 250.19 C 431.03 250.30 432.23 251.78 432.23 253.42 C 432.23 255.07 431.03 256.35 429.01 256.23 "/><path fill="#B72654" d="M 433.36 260.18 L 433.36 250.5 C 435.5 250.67 437.63 250.90 439.76 251.17 L 439.76 252.85 C 438.26 252.67 436.76 252.50 435.26 252.35 L 435.26 254.63 C 436.54 254.75 437.82 254.89 439.10 255.05 L 439.10 256.73 C 437.82 256.58 436.54 256.44 435.26 256.32 L 435.26 258.67 C 436.76 258.82 438.26 258.98 439.76 259.17 L 439.76 260.85 C 437.63 260.59 435.5 260.36 433.36 260.18 "/><path fill="#B72654" d="M 444.78 253.57 C 444.18 253.47 443.59 253.38 443 253.30 L 443 255.85 C 443.59 255.94 444.18 256.03 444.78 256.12 C 445.60 256.25 446.15 255.82 446.15 255.07 C 446.15 254.32 445.60 253.70 444.78 253.57 M 446.24 261.80 C 445.61 260.41 444.98 259.02 444.35 257.64 C 443.90 257.57 443.45 257.50 443 257.43 L 443 261.30 C 442.36 261.20 441.73 261.12 441.10 261.03 L 441.10 251.34 C 442.37 251.51 443.63 251.70 444.90 251.90 C 446.87 252.21 448.03 253.78 448.03 255.39 C 448.03 256.76 447.21 257.45 446.27 257.63 C 446.99 259.15 447.71 260.67 448.42 262.19 C 447.70 262.05 446.97 261.93 446.24 261.80 "/><path fill="#B72654" d="M 449.25 262.34 L 449.25 252.66 C 449.88 252.77 450.51 252.89 451.13 253.02 L 451.13 262.71 C 450.51 262.58 449.88 262.46 449.25 262.34 "/><path fill="#B72654" d="M 457.01 256.44 C 456.74 256.06 456.32 255.75 455.81 255.64 C 455.30 255.52 454.87 255.62 454.60 255.88 C 454.23 256.21 454.14 256.63 454.14 258.50 C 454.14 260.36 454.23 260.83 454.60 261.32 C 454.87 261.69 455.30 262 455.81 262.11 C 456.32 262.23 456.74 262.13 457.01 261.88 C 457.37 261.56 457.48 261.14 457.48 259.27 C 457.48 257.41 457.37 256.93 457.01 256.44 M 458.39 263.36 C 457.72 263.87 456.90 264.05 455.81 263.80 C 454.72 263.55 453.89 262.98 453.21 262.16 C 452.24 260.97 452.26 259.77 452.26 258.09 C 452.26 256.42 452.24 255.20 453.21 254.43 C 453.89 253.89 454.72 253.70 455.81 253.95 C 456.90 254.20 457.72 254.78 458.39 255.63 C 459.35 256.85 459.34 258.07 459.34 259.74 C 459.34 261.41 459.35 262.62 458.39 263.36 "/><path fill="#B72654" d="M 412.59 323.82 L 412.59 318.38 L 411.21 319.58 L 411.21 318.24 L 412.59 317.04 L 413.83 317.04 L 413.83 323.82 Z M 412.59 323.82 "/><path fill="#B72654" d="M 417.46 318.10 C 416.95 318.10 416.58 318.46 416.58 319.09 C 416.58 319.69 416.93 320.08 417.46 320.08 C 417.96 320.08 418.33 319.72 418.33 319.09 C 418.33 318.46 417.96 318.10 417.46 318.10 M 419.01 320.89 L 417.57 323.82 L 416.23 323.82 L 417.64 321.02 C 417.48 321.09 417.30 321.11 417.13 321.11 C 416.22 321.11 415.34 320.35 415.34 319.10 C 415.34 317.76 416.26 316.99 417.46 316.99 C 418.66 316.99 419.57 317.74 419.57 319.08 C 419.57 319.70 419.31 320.27 419.01 320.89 "/><path fill="#B72654" d="M 424.06 323.32 C 423.75 323.63 423.27 323.88 422.56 323.88 C 421.86 323.88 421.34 323.63 421.05 323.33 C 420.63 322.92 420.53 322.42 420.5 321.93 L 421.73 321.93 C 421.80 322.46 422.05 322.76 422.56 322.76 C 422.80 322.76 423.00 322.70 423.15 322.55 C 423.37 322.33 423.42 321.96 423.42 321.53 C 423.42 320.76 423.19 320.32 422.59 320.32 C 422.08 320.32 421.86 320.60 421.77 320.87 L 420.64 320.87 L 420.64 317.04 L 424.50 317.04 L 424.50 318.16 L 421.76 318.16 L 421.76 319.61 C 421.94 319.44 422.32 319.27 422.78 319.27 C 423.34 319.27 423.77 319.45 424.05 319.73 C 424.58 320.26 424.66 320.90 424.66 321.53 C 424.66 322.30 424.55 322.83 424.06 323.32 "/><path fill="#B72654" d="M 427.18 323.82 L 427.18 318.38 L 425.80 319.58 L 425.80 318.24 L 427.18 317.04 L 428.41 317.04 L 428.41 323.82 Z M 427.18 323.82 "/><path fill="#B72654" d="M 420.10 355.78 L 417.77 354.98 C 391.83 345.75 374.41 320.55 374.41 292.26 L 374.41 251.71 C 387.99 247.69 402.01 245.49 416.07 245.14 L 416.07 245.14 C 418.76 245.07 421.45 245.07 424.14 245.14 C 438.20 245.49 452.22 247.69 465.80 251.71 L 465.80 292.26 C 465.80 320.55 448.37 345.75 422.44 354.98 Z M 466.83 250.66 C 466.53 250.57 466.22 250.47 465.91 250.38 C 451.23 246.05 436.01 243.83 420.65 243.78 C 420.47 243.78 420.29 243.78 420.10 243.78 C 419.92 243.78 419.74 243.78 419.56 243.78 C 404.20 243.83 388.98 246.05 374.30 250.38 C 373.99 250.47 373.68 250.57 373.37 250.66 L 373.10 250.74 L 373.10 292.26 C 373.10 321.10 390.88 346.80 417.33 356.22 L 419.98 357.12 L 420.10 357.17 L 420.23 357.12 L 422.87 356.22 C 449.33 346.80 467.11 321.10 467.11 292.26 L 467.11 250.74 Z M 466.83 250.66 "/></svg></span><div class="brand-txt"><span class="brand-school">충북대학교 법학전문대학원</span><span class="brand-author">작성 <b>이기수</b></span></div></div><h1>채권총론 필수 암기 (기말)</h1>
+  <div class="sub">&lt; 수인의 채권ㆍ채무관계 &gt;</div>
+  <div class="legend">
+    <span><u class="m">밑줄</u> 원문 밑줄</span>
+    <span><b class="kw">핵심어</b> 가릴 수 있는 핵심어</span>
+    <span><b>굵게</b> 중요 내용</span>
+    <span><span class="pc" style="margin:0;padding:0 8px"><span class="lb">판례)</span></span> 판례</span>
+    <span><span class="imp">★★★</span> 중요도</span>
+  </div>
+  <details class="ix">
+    <summary>쟁점별 중요도 목록 · <span class="counts">★★★ 2 · ★★ 1 · ★ 0</span></summary>
+    <nav class="ix-grid" aria-label="중요도 목록"><div class="ix-part">수인의 채권ㆍ채무관계</div><a href="#s1" data-imp="2"><span>① 분할채권(채무)관계</span><span class="imp" title="중요도 2/3">★★<span class="off">★</span></span></a><a href="#s2" data-imp="3"><span>② 불가분채권(채무)관계</span><span class="imp" title="중요도 3/3">★★★</span></a><a href="#s3" data-imp="3"><span>③ (진정)연대채무관계</span><span class="imp" title="중요도 3/3">★★★</span></a></nav>
+  </details>
+  <p class="sm">중요도 별점과 굵은 글씨·핵심어 표시는 Claude가 판례 비중과 시험에 나올 가능성을 보고 붙인 것이에요. 원문 문장은 바꾸지 않았어요. 도식 속 금액·인물은 이해를 돕기 위한 가상 예시예요.</p>
+  <details class="add sup " open><summary><span class="addtag">안내</span>이 페이지를 보는 방법</summary><div class="supbody"><p class="lead">정리본의 원래 문장은 하나도 바꾸거나 빼지 않았어요. 그 사이사이에 <b>처음 공부하는 사람도 바로 이해할 수 있도록</b> 풀어 쓴 설명을 덧붙였고, 덧붙인 내용은 모두 <b>금색 테두리의 접기 상자</b>에 들어 있어요.</p><dl class="terms"><dt><span class="addtag">도식</span></dt><dd>사실관계와 법률관계를 그림으로 정리했어요. 맨 위에 한두 문장으로 “무엇이 문제인지”를 먼저 설명해요. 기본으로 펼쳐져 있어요.</dd><dt><span class="addtag">보충</span></dt><dd>원문에 없는 조문, 요건, 효과를 풀어서 보충했어요. 기본으로 접혀 있어요.</dd><dt><span class="addtag c">판례</span></dt><dd>변호사시험에 자주 나오는 판례를 <b>사실관계 → 쟁점 → 판단 → 의미</b> 순서로 정리했어요. 기본으로 접혀 있어요.</dd><dt><span class="addtag k">정리</span></dt><dd>각 단원 끝에서 사례를 풀 때 확인할 순서를 정리했어요.</dd></dl><p>오른쪽 아래 <b>필기</b> 버튼을 누르면 애플펜슬로 화면 위에 바로 쓸 수 있어요. 펜·형광펜·지우개와 색, 펜촉 크기를 고를 수 있고, 쓴 내용과 읽던 위치는 자동으로 저장돼서 다음에 열면 그대로 이어져요.</p><p>상단의 <b>원문만 보기</b>를 누르면 덧붙인 내용이 모두 사라지고 원래 정리본만 남아요. <b>추가 모두 펼치기 / 접기</b>로 한 번에 열고 닫을 수도 있어요.</p><p><span class="sm">판례는 판결 요지를 쉽게 풀어 쓴 것이에요. 판례 상자의 제목 아래에 사건번호를 적어 두었어요. 번호를 확인하지 못한 곳은 그렇다고 표시했어요. 출제 연도나 세부 표현은 기출문제집이나 종합법률정보로 한 번 더 확인해 주세요.</span></p></div></details>
+</header>
+
+<div class="part" id="p1" data-imp="0"><h2 class="pt"><span><b>&lt; 수인의 채권ㆍ채무관계 &gt;</b></span></h2>
+<section class="s" id="s1" data-imp="2"><h2><span class="no">①</span><span>분할채권<span class="sm">(채무)</span>관계</span><span class="imp" title="중요도 2/3">★★<span class="off">★</span></span></h2>
+<h3 class="h-num">1. 의의</h3>
+<p class="ln d" style="--ind:6px">하나의 <b class="kw">가분적 급부</b>에 관하여, 각 채권자 또는 채무자가 <b class="kw">각자의 지분</b>을 가지는 관계 <span class="sm">(</span><b class="kw"><span class="sm">제408조</span></b><span class="sm">)</span></p>
+<p class="ln d" style="--ind:6px">민법상 다수당사자의 채권<span class="sm">(채무)</span>관계의 <b class="kw">원칙적인 모습</b>.</p>
+<details class="add dgw" open><summary><span class="addtag">도식</span>채무자가 여럿일 때 — 네 가지 관계 한눈에 비교 </summary><figure class="dg"><figcaption>도식 · 채무자가 여럿일 때 — 네 가지 관계 한눈에 비교 <span class="ex">금액·인물은 가상 예시</span></figcaption><p class="lead">채권자나 채무자가 여러 명이면, 결국 문제는 세 가지예요. ① 채권자가 <b>누구에게 얼마를</b> 청구할 수 있나, ② 한 사람에게 생긴 일(청구·면제·시효 등)이 <b>다른 사람에게도 효력이 있나</b>, ③ 한 사람이 갚은 뒤 <b>내부에서 어떻게 나누나</b>. 네 가지 관계는 이 세 질문의 답이 서로 달라요.</p><div class="tbl"><table><tr><td></td><td>채권자는 누구에게 얼마를 청구하나</td><td>한 사람에게 생긴 일(청구·면제·시효 등)은</td><td>내부 정산(구상)</td><td>대표적인 예</td></tr><tr><td><b>분할</b></td><td>각자에게 <b>자기 몫만</b> 청구해요.</td><td>다른 사람에게 영향이 없어요.</td><td>처음부터 각자 몫만 내므로 문제되지 않아요.</td><td>금전채무 공동상속, 공동불법행위자들의 구상채무</td></tr><tr><td><b>불가분</b></td><td>누구에게나 <b>전부</b> 청구할 수 있어요.</td><td>원칙적으로 그 사람에게만 효력이 있어요(제410조·제411조).</td><td>부담부분만큼 구상해요(연대채무 규정 준용).</td><td>공동임대인의 보증금반환, 여럿이 함께 무단사용한 부당이득</td></tr><tr><td><b>연대</b></td><td>누구에게나 <b>전부</b> 청구할 수 있어요.</td><td>이행청구·경개·상계·면제·혼동·시효완성·채권자지체는 다른 채무자에게도 효력이 있어요(제416조~제422조).</td><td>부담부분만큼 구상하고, 사전·사후 통지가 필요해요(제425조·제426조).</td><td>“연대하여 갚는다”고 약정한 경우</td></tr><tr><td><b>부진정연대</b></td><td>누구에게나 <b>전부</b> 청구할 수 있어요.</td><td>변제·대물변제·공탁·상계처럼 채권자를 실제로 만족시킨 일만 다른 채무자에게 효력이 있어요.</td><td>자기 부담부분을 넘어 갚은 사람만 구상해요. 통지 규정은 적용되지 않아요.</td><td>공동불법행위, 사용자책임과 피용자의 책임</td></tr></table></div><div class="calc">예: 채무 9천만 원, 채무자 A·B·C 세 명 (부담부분은 같다고 가정)<br>분할이면 → 채권자는 A·B·C에게 각각 <b>3천만 원씩만</b> 청구<br>불가분·연대·부진정연대면 → 채권자는 A에게 <b>9천만 원 전부</b>를 청구할 수 있고, A가 다 갚으면 B·C에게 3천만 원씩 구상</div><div class="tip"><b>시험 포인트</b> 민법은 특별한 의사표시가 없으면 <b>분할</b>이 원칙이에요(제408조). 그래서 사례에서 “전부를 청구할 수 있다”고 쓰려면, 불가분·연대·부진정연대 중 어디에 해당하는 근거를 먼저 대야 해요.</div></figure></details>
+<h3 class="h-num">2. 긍정례</h3>
+<p class="ln kor" style="--ind:6px">㉠ 공동불법행위자 수인 중 1인이 변제했을 때, <b class="kw">나머지의 구상금채무</b></p>
+<p class="ln kor" style="--ind:6px">㉡ 수인의 상속인에게 <b class="kw">상속된 금전채무</b></p>
+<details class="add dgw" open><summary><span class="addtag">도식</span>금전채무를 여럿이 상속하면 — 분할채무의 대표 예 </summary><figure class="dg"><figcaption>도식 · 금전채무를 여럿이 상속하면 — 분할채무의 대표 예 <span class="ex">금액·인물은 가상 예시</span></figcaption><p class="lead">아버지가 9천만 원의 빚을 남기고 돌아가셨고, 자녀 셋이 같은 비율로 상속했어요. 돈은 나눌 수 있는 급부(가분급부)라서, 빚은 상속과 동시에 <b>상속분대로 쪼개져서</b> 각 자녀에게 넘어가요.</p><div class="relwrap"><svg class="relsvg" viewBox="0 0 330 205" role="img" aria-label="금전채무 공동상속: 채권자는 각 상속인에게 상속분만큼만 청구할 수 있다"><defs><marker id="r1k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm k"/></marker><marker id="r1m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm m"/></marker><marker id="r1y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm y"/></marker><marker id="r1n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm n"/></marker><marker id="r1q" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm q"/></marker></defs><line x1="144.2" y1="63.0" x2="75.8" y2="145.0" class="re y" marker-end="url(#r1y)"/><line x1="165.0" y1="63.0" x2="165.0" y2="145.0" class="re y" marker-end="url(#r1y)"/><line x1="185.8" y1="63.0" x2="254.2" y2="145.0" class="re y" marker-end="url(#r1y)"/><rect x="115.2" y="16.0" width="99.5" height="44.0" rx="8" class="rn "/><text x="165" y="35" class="rt" text-anchor="middle">채권자</text><text x="165" y="52" class="rs" text-anchor="middle">9천만 원 대여</text><rect x="14.3" y="148.0" width="81.3" height="44.0" rx="8" class="rn "/><text x="55" y="167" class="rt" text-anchor="middle">자녀 A</text><text x="55" y="184" class="rs" text-anchor="middle">3천만 원만</text><rect x="124.3" y="148.0" width="81.3" height="44.0" rx="8" class="rn "/><text x="165" y="167" class="rt" text-anchor="middle">자녀 B</text><text x="165" y="184" class="rs" text-anchor="middle">3천만 원만</text><rect x="234.3" y="148.0" width="81.3" height="44.0" rx="8" class="rn "/><text x="275" y="167" class="rt" text-anchor="middle">자녀 C</text><text x="275" y="184" class="rs" text-anchor="middle">3천만 원만</text></svg><div class="rlg"><span class="lg lg-y"><i></i>청구 가능</span></div><p class="relcap">채권자는 자녀마다 상속분(1/3)인 3천만 원씩만 청구할 수 있어요.</p></div><div class="tip"><b>시험 포인트</b> 채권자가 자녀 A에게 9천만 원 전부를 청구하면, A는 “내 몫은 3천만 원뿐”이라고 다툴 수 있어요. 상속인들끼리 “A가 혼자 다 갚기로” 정해도, 채권자가 승낙하지 않으면 채권자에게는 효력이 없어요(면책적 채무인수의 문제).</div></figure></details>
+<details class="add sup "><summary><span class="addtag c">판례</span>분할채무로 본 대표 판례 두 가지</summary><div class="supbody"><div class="case"><div class="ct">① 금전채무를 공동상속한 경우<span class="cno">대법원 1997. 6. 24. 선고 97다8809 판결</span></div><div class="cr"><span class="ck">사실관계</span><div class="cv">피상속인이 금전채무를 남기고 사망해 여러 명이 공동상속했어요. 상속인들은 그 채무를 상속재산분할 협의로 한 사람에게 몰아주려고 했어요.</div></div><div class="cr"><span class="ck">쟁점</span><div class="cv">금전채무도 상속재산분할의 대상이 되나?</div></div><div class="cr"><span class="ck">판단</span><div class="cv">금전채무처럼 나눌 수 있는 채무는 상속이 시작되는 순간 <b>법정상속분에 따라 당연히 나뉘어</b> 각 상속인에게 귀속돼요. 그래서 상속재산분할의 대상이 될 여지가 없어요.</div></div><div class="cr"><span class="ck">의미</span><div class="cv">상속인들이 한 사람에게 몰아주기로 합의했다면 그것은 상속재산분할이 아니라 <b>면책적 채무인수</b>여서, 채권자의 승낙이 있어야 채권자에게 효력이 있어요.</div></div></div><div class="case"><div class="ct">② 공동불법행위자 중 한 명이 배상한 뒤 구상하는 경우<span class="cno">대법원 2002. 9. 27. 선고 2002다15917 판결</span></div><div class="cr"><span class="ck">쟁점</span><div class="cv">공동불법행위자 중 한 명이 배상한 뒤 구상할 때, 구상의무를 지는 여러 사람은 어떤 관계로 책임지나?</div></div><div class="cr"><span class="ck">판단</span><div class="cv">각자의 부담부분은 <b>과실의 정도</b>로 정하고, 구상의무를 지는 사람들은 각자의 부담부분에 따른 <b>분할채무</b>를 져요.</div></div><div class="cr"><span class="ck">의미</span><div class="cv">예: 과실 A 50%·B 30%·C 20%인 사고에서 A가 1억 원을 다 배상했다면, A는 B에게 3천만 원, C에게 2천만 원을 따로 청구해요.</div></div></div></div></details>
+<h3 class="h-num">3. 부정례</h3>
+<p class="ln kor" style="--ind:6px">㉠ 공동불법행위자 수인 중 1인이 변제했을 때, <b class="kw">변제자가 무과실인 경우</b> <span class="sm">(</span><b class="kw"><span class="sm">부진정연대채무관계 성립</span></b><span class="sm">)</span></p>
+<details class="add dgw" open><summary><span class="addtag">도식</span>배상한 사람에게 과실이 없으면 — 구상관계가 달라진다 </summary><figure class="dg"><figcaption>도식 · 배상한 사람에게 과실이 없으면 — 구상관계가 달라진다 <span class="ex">금액·인물은 가상 예시</span></figcaption><p class="lead">공동불법행위자끼리의 구상채무는 원칙적으로 <b>분할채무</b>예요. 그런데 피해자에게 배상한 사람이 <b>과실이 전혀 없는</b> 사람(내부적으로 부담할 몫이 0인 사람)이라면, 나머지 사람들은 그에게 <b>각자 전액</b>을 물어줘야 해요(부진정연대).</p><div class="two"><div class="panel a"><h5>배상한 A에게 과실이 있는 경우 (원칙)</h5><div class="brk" style="margin-top:0"><div class="relwrap"><svg class="relsvg" viewBox="0 0 320 200" role="img" aria-label="구상권자에게 과실이 있으면 다른 공동불법행위자들의 구상의무는 분할채무다"><defs><marker id="r2k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm k"/></marker><marker id="r2m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm m"/></marker><marker id="r2y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm y"/></marker><marker id="r2n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm n"/></marker><marker id="r2q" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm q"/></marker></defs><line x1="108.8" y1="87.5" x2="211.2" y2="54.5" class="re y" marker-end="url(#r2y)"/><line x1="108.8" y1="112.9" x2="211.2" y2="147.1" class="re y" marker-end="url(#r2y)"/><rect x="34.2" y="78.0" width="71.7" height="44.0" rx="8" class="rn "/><text x="70" y="97" class="rt" text-anchor="middle">A</text><text x="70" y="114" class="rs" text-anchor="middle">과실 50%</text><rect x="214.2" y="20.0" width="71.7" height="44.0" rx="8" class="rn "/><text x="250" y="39" class="rt" text-anchor="middle">B</text><text x="250" y="56" class="rs" text-anchor="middle">과실 30%</text><rect x="214.2" y="138.0" width="71.7" height="44.0" rx="8" class="rn "/><text x="250" y="157" class="rt" text-anchor="middle">C</text><text x="250" y="174" class="rs" text-anchor="middle">과실 20%</text><text class="rl y" text-anchor="middle"><tspan x="156.3" y="64.1">3천만 원만</tspan></text><text class="rl y" text-anchor="middle"><tspan x="156.2" y="145.9">2천만 원만</tspan></text></svg><div class="rlg"><span class="lg lg-y"><i></i>청구 가능</span></div></div><p>A가 피해자에게 1억 원을 모두 배상했어요. B와 C는 자기 몫만 따로 물어줘요. <b>분할채무</b>예요.</p></div></div><div class="panel y"><h5>배상한 D에게 과실이 없는 경우 (예외)</h5><div class="brk" style="margin-top:0"><div class="relwrap"><svg class="relsvg" viewBox="0 0 320 200" role="img" aria-label="구상권자에게 과실이 없으면 다른 공동불법행위자들의 구상의무는 부진정연대다"><defs><marker id="r3k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm k"/></marker><marker id="r3m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm m"/></marker><marker id="r3y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm y"/></marker><marker id="r3n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm n"/></marker><marker id="r3q" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm q"/></marker></defs><line x1="105.5" y1="88.6" x2="211.2" y2="54.5" class="re y" marker-end="url(#r3y)"/><line x1="105.5" y1="111.8" x2="211.2" y2="147.1" class="re y" marker-end="url(#r3y)"/><rect x="37.5" y="78.0" width="65.0" height="44.0" rx="8" class="rn "/><text x="70" y="97" class="rt" text-anchor="middle">D</text><text x="70" y="114" class="rs" text-anchor="middle">과실 0%</text><rect x="214.2" y="20.0" width="71.7" height="44.0" rx="8" class="rn "/><text x="250" y="39" class="rt" text-anchor="middle">A</text><text x="250" y="56" class="rs" text-anchor="middle">과실 60%</text><rect x="214.2" y="138.0" width="71.7" height="44.0" rx="8" class="rn "/><text x="250" y="157" class="rt" text-anchor="middle">B</text><text x="250" y="174" class="rs" text-anchor="middle">과실 40%</text><text class="rl y" text-anchor="middle"><tspan x="154.7" y="64.6">1억 원 전부</tspan></text><text class="rl y" text-anchor="middle"><tspan x="154.5" y="145.3">1억 원 전부</tspan></text></svg><div class="rlg"><span class="lg lg-y"><i></i>청구 가능</span></div></div><p>과실 없는 D가 피해자에게 1억 원을 모두 배상했어요. D는 A와 B 누구에게나 1억 원 전부를 구상할 수 있어요. 둘을 합쳐 1억 원을 받으면 끝나요. <b>부진정연대</b>예요.</p></div></div></div><div class="tip"><b>시험 포인트</b> 예외의 이유: 과실 없는 사람이 먼저 배상했다는 이유로 나머지 가해자들의 무자력 위험까지 떠안는 것은 불공평하기 때문이에요. 예를 들어 과실 없이 법률상 배상책임만 진 사람이 여기에 해당할 수 있어요.</div></figure></details>
+<details class="add sup "><summary><span class="addtag c">판례</span>구상권자에게 과실이 없을 때의 구상관계</summary><div class="supbody"><div class="case"><div class="ct">과실 없는 사람이 배상한 뒤 나머지 가해자들에게 구상하는 경우<span class="cno">대법원 2005. 10. 13. 선고 2003다24147 판결</span></div><div class="cr"><span class="ck">판단</span><div class="cv">공동불법행위자 사이의 구상의무는 원칙적으로 분할채무지만, <b>구상권자인 공동불법행위자 측에 과실이 없는 경우</b>, 즉 내부적인 부담 부분이 전혀 없는 경우에는 구상의무자들 사이의 관계를 <b>부진정연대관계</b>로 봐요.</div></div><div class="cr"><span class="ck">의미</span><div class="cv">원문 ① 3. 부정례 ㉠이 바로 이 판례예요. 긍정례 ㉠(분할)과 짝으로 외워 두세요.</div></div></div></div></details>
+<p class="ln kor" style="--ind:6px">㉡ 공유물에 대한 제3자의 불법행위 내지는 부당이득에 의한 손해배상청구권 또는 부당이득반환청구권</p>
+<details class="add sup "><summary><span class="addtag c">판례</span>공유물을 침해당했을 때 공유자는 얼마를 청구하나</summary><div class="supbody"><div class="case"><div class="ct">제3자가 공유 토지를 무단으로 점유한 경우<span class="cno">대법원 1970. 4. 14. 선고 70다171 판결</span></div><div class="cr"><span class="ck">사실관계</span><div class="cv">공유 토지를 제3자가 권원 없이 점유하자, 공유자 중 한 명이 그 제3자에게 임료 상당의 손해배상을 청구했어요.</div></div><div class="cr"><span class="ck">쟁점</span><div class="cv">A 혼자서 손해 전부를 청구할 수 있나?</div></div><div class="cr"><span class="ck">판단</span><div class="cv">각 공유자는 그 <b>지분에 대응하는 비율의 한도</b>에서만 손해배상을 청구할 수 있고, 다른 공유자의 지분에 대해서는 청구권이 없어요.</div></div><div class="cr"><span class="ck">의미</span><div class="cv">반면 토지를 돌려 달라거나 방해를 없애 달라는 청구는 <b>보존행위</b>여서 공유자 한 명이 단독으로 전부 청구할 수 있어요(제265조 단서). 돈으로 받는 청구만 지분만큼 나뉘어요.</div></div></div><p><span class="sm">판례대로라면 이 청구권은 지분 비율로 나뉘는 <b>분할채권</b>처럼 다뤄져요. 원문에는 “부정례”에 들어 있어서, 분류를 한 번 더 확인해 보면 좋겠어요(원문은 그대로 두었어요).</span></p></div></details>
+<p class="ln kor" style="--ind:6px">㉢ 공동임차인 또는 공동임대인에 대한 임차보증금반환채권<span class="sm">(채무)</span></p>
+<h3 class="h-num">4. 효력</h3>
+<p class="ln d" style="--ind:6px">각 채권자 또는 채무자는 <b class="kw">균등한 비율</b>로 권리가 있고 의무를 부담한다.</p>
+<details class="add sup "><summary><span class="addtag">보충</span>분할채권관계의 효력 — 원문 밖 핵심</summary><div class="supbody"><ul><li>비율은 <b>특별한 의사표시가 없을 때</b>만 균등해요(제408조). 약정이나 상속분처럼 다른 기준이 있으면 그에 따라요.</li><li>채권자 한 명 또는 채무자 한 명에게 생긴 일(이행청구, 면제, 시효완성 등)은 <b>다른 사람에게 영향이 없어요</b>. 각자의 채권·채무가 따로 있기 때문이에요.</li><li>다만 계약을 <b>해제</b>할 때는 예외예요. 당사자 한쪽이 여럿이면 해제는 <b>전원이, 전원에게</b> 해야 해요(제547조, 해제권의 불가분성).</li></ul></div></details>
+</section>
+<section class="s" id="s2" data-imp="3"><h2><span class="no">②</span><span>불가분채권<span class="sm">(채무)</span>관계</span><span class="imp" title="중요도 3/3">★★★</span></h2>
+<h3 class="h-num">1. 의의</h3>
+<p class="ln d" style="--ind:6px">하나의 채권<span class="sm">(채무)</span>에 대해 수인이 공동으로 <b class="kw">100%의 지분</b>을 가지는 관계 <span class="sm">(</span><b class="kw"><span class="sm">제409조</span></b><span class="sm">)</span></p>
+<details class="add dgw" open><summary><span class="addtag">도식</span>불가분채무 — 누구에게나 전부를 청구할 수 있다 </summary><figure class="dg"><figcaption>도식 · 불가분채무 — 누구에게나 전부를 청구할 수 있다 <span class="ex">금액·인물은 가상 예시</span></figcaption><p class="lead">A와 B가 함께 건물을 임대하고 보증금 2억 원을 받았어요. 보증금을 돌려줄 의무는 성질상 나눌 수 없는 것으로 봐서(불가분채무), 임차인은 A와 B <b>누구에게나 2억 원 전부</b>를 돌려 달라고 할 수 있어요.</p><div class="relwrap"><svg class="relsvg" viewBox="0 0 320 212" role="img" aria-label="공동임대인의 보증금반환채무는 불가분채무라 임차인은 각자에게 전부를 청구할 수 있다"><defs><marker id="r4k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm k"/></marker><marker id="r4m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm m"/></marker><marker id="r4y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm y"/></marker><marker id="r4n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm n"/></marker><marker id="r4q" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm q"/></marker></defs><line x1="141.9" y1="65.0" x2="75.8" y2="156.0" class="re y" marker-end="url(#r4y)"/><line x1="178.1" y1="65.0" x2="244.2" y2="156.0" class="re y" marker-end="url(#r4y)"/><line x1="119.1" y1="175.0" x2="200.9" y2="175.0" class="re k"/><rect x="110.2" y="18.0" width="99.5" height="44.0" rx="8" class="rn "/><text x="160" y="37" class="rt" text-anchor="middle">임차인</text><text x="160" y="54" class="rs" text-anchor="middle">보증금 2억 원</text><rect x="7.9" y="159.0" width="108.2" height="32.0" rx="8" class="rn "/><text x="62" y="180" class="rt" text-anchor="middle">공동임대인 A</text><rect x="203.9" y="159.0" width="108.2" height="32.0" rx="8" class="rn "/><text x="258" y="180" class="rt" text-anchor="middle">공동임대인 B</text><text class="rl y" text-anchor="end"><tspan x="96.6" y="113.1">2억 원 전부</tspan></text><text class="rl y" text-anchor="start"><tspan x="223.4" y="113.1">2억 원 전부</tspan></text><text class="rl k" text-anchor="middle"><tspan x="160.0" y="193.5">구상</tspan></text></svg><div class="rlg"><span class="lg lg-k"><i></i>계약·관계</span><span class="lg lg-y"><i></i>청구 가능</span></div></div><div class="tip"><b>시험 포인트</b> A가 2억 원을 다 돌려주면 B의 채무도 함께 없어지고, A는 B에게 B의 몫(부담부분)을 구상해요. 분할채무였다면 임차인은 A·B에게 1억 원씩 따로 받아야 해서 한쪽이 돈이 없으면 손해를 봐요.</div></figure></details>
+<h3 class="h-num">2. 불가분채무 인정례</h3>
+<p class="ln kor" style="--ind:6px">㉠ 공동임대인의 보증금반환채무</p>
+<div class="pc" style="--ind:11px"><span class="dsh">-</span><span class="lb">판례)</span><span class="body">공동임대인의 보증금반환채무는 <b class="kw">성질상 불가분채무</b>에 해당한다. 따라서 <u class="m">임대인 지위를 </u><u class="m"><b class="kw">공동상속</b></u><u class="m">한 상속인들이 임차인에 대하여 부담하는 임차보증금반환채무의 성질 역시 불가분채무에 해당한다.</u></span></div>
+<details class="add sup "><summary><span class="addtag c">판례</span>공동임대인·공동상속인의 보증금반환채무</summary><div class="supbody"><div class="case"><div class="ct">① 건물 공유자들이 함께 임대한 경우<span class="cno">대법원 1998. 12. 8. 선고 98다43137 판결</span></div><div class="cr"><span class="ck">판단</span><div class="cv">건물의 공유자가 공동으로 건물을 임대하고 보증금을 받은 경우, 특별한 사정이 없는 한 그 보증금 반환채무는 <b>성질상 불가분채무</b>예요.</div></div></div><div class="case"><div class="ct">② 임대인이 사망해 여러 명이 임대인 지위를 상속한 경우<span class="cno">대법원 2021. 1. 28. 선고 2015다59801 판결</span></div><div class="cr"><span class="ck">사실관계</span><div class="cv">상가 건물의 임대인이 사망해 여러 상속인이 공동으로 임대인 지위를 승계했어요. 원심은 보증금반환채무를 상속분대로 나눠서 각자 그 몫만 돌려주면 된다고 봤어요.</div></div><div class="cr"><span class="ck">쟁점</span><div class="cv">상속인들이 지는 보증금반환채무는 상속분대로 나뉘는 분할채무인가?</div></div><div class="cr"><span class="ck">판단</span><div class="cv">아니에요. 임대인 지위를 공동으로 승계한 공동임대인들의 임차보증금 반환채무는 <b>성질상 불가분채무</b>예요. 대법원은 원심을 파기했어요.</div></div><div class="cr"><span class="ck">의미</span><div class="cv">금전채무 공동상속은 분할이 원칙(97다8809)이지만, <b>임대인 지위</b>를 승계한 경우에는 보증금반환채무가 불가분이라는 점을 구별하세요.</div></div></div></div></details>
+<p class="ln kor" style="--ind:6px">㉡ 타인의 재산을 공동으로 사용한 경우</p>
+<div class="pc" style="--ind:11px"><span class="dsh">-</span><span class="lb">판례)</span><span class="body">수인이 공동으로 법률상 원인 없이 타인의 재산을 사용한 경우의 부당이득반환채무는 <b class="kw">불가분채무이다</b>.</span></div>
+<details class="add sup "><summary><span class="addtag c">판례</span>여럿이 남의 재산을 함께 쓴 경우 — 같은 판결의 두 법리</summary><div class="supbody"><div class="case"><div class="ct">공유 토지를 일부 공유자들만 사용한 경우<span class="cno">대법원 2001. 12. 11. 선고 2000다13948 판결</span></div><div class="cr"><span class="ck">사실관계</span><div class="cv">여러 명이 공유하는 토지를 일부 공유자들이 함께 점유해 사용했고, 토지를 사용하지 못한 다른 공유자가 부당이득반환을 청구했어요.</div></div><div class="cr"><span class="ck">판단</span><div class="cv">① 사용하지 못한 공유자는 사용한 공유자들에게 <b>자기 지분에 상응하는</b> 부당이득을 청구할 수 있어요. ② 여러 명이 공동으로 법률상 원인 없이 남의 재산을 사용했다면, 그 부당이득반환채무는 특별한 사정이 없는 한 <b>불가분채무</b>예요. 그래서 사용한 사람들 각자가 전액을 책임져요.</div></div><div class="cr"><span class="ck">의미</span><div class="cv">청구하는 쪽은 “지분만큼”, 책임지는 쪽은 “각자 전부”예요. 둘을 헷갈리지 마세요.</div></div></div></div></details>
+<h3 class="h-num">3. 불가분채권 인정례</h3>
+<p class="ln d" style="--ind:6px"><b class="kw">공동임차인의 임차보증금반환채권</b></p>
+<h3 class="h-num">4. 효력</h3>
+<h4 style="--ind:6px">1) 불가분채무의 경우</h4>
+<p class="ln d" style="--ind:11px">대외적 효력 : <b class="kw">연대채무에 관한 규정</b> 준수 <span class="sm">(채권자는 모든 불가분채무자에 대해 </span><b class="kw"><span class="sm">채무 전부의 이행청구</span></b><span class="sm"> 가능.)</span></p>
+<p class="ln d" style="--ind:11px">대내적 효력 : <b class="kw">연대채무에 관한 규정</b> 준수 <span class="sm">(다른 채무자의 부담부분에 대해 </span><b class="kw"><span class="sm">구상권</span></b><span class="sm">을 구할 수 있다.)</span></p>
+<h4 style="--ind:6px">2) 불가분채권의 경우</h4>
+<p class="ln d" style="--ind:11px">대외적 효력 : 각 채권자는 모든 채권자를 위하여 <b class="kw">전부의 이행을 청구</b>할 수 있다.</p>
+<p class="ln d" style="--ind:11px">대내적 효력 : 채권 전부의 변제를 받은 채권자는 <b>내부관계의 비율에 따라</b> <b class="kw">이익을 분급</b>해야 한다.</p>
+<details class="add dgw" open><summary><span class="addtag">도식</span>불가분채무와 연대채무, 어디가 다른가 (제410조·제411조) </summary><figure class="dg"><figcaption>도식 · 불가분채무와 연대채무, 어디가 다른가 (제410조·제411조) <span class="ex">금액·인물은 가상 예시</span></figcaption><p class="lead">원문은 불가분채무에 “연대채무에 관한 규정”이 적용된다고 정리했어요. 정확히는 연대채무 규정을 <b>모두 가져오는 것이 아니라 일부만</b> 준용해요(제411조). 그래서 “한 사람에게 생긴 일”의 효력에서 차이가 나요.</p><div class="two"><div class="panel y"><h5>똑같은 점 (준용되는 규정)</h5><div class="brk" style="margin-top:0">· 채권자는 누구에게나 전부 또는 일부를 청구할 수 있어요(제414조).<br>· 한 사람이 다 갚으면 모두의 채무가 없어져요.<br>· 무효·취소 원인은 각자 따로 봐요(제415조).<br>· 채권자지체는 모두에게 효력이 있어요(제422조).<br>· 갚은 사람은 부담부분만큼 구상하고, 통지 규정도 적용돼요(제424조~제427조).</div></div><div class="panel n"><h5>다른 점 (준용되지 않는 규정)</h5><div class="brk" style="margin-top:0">연대채무에서 다른 채무자에게도 효력이 미치는 <b>이행청구·경개·상계·면제·혼동·시효완성</b>(제416조~제421조)은 불가분채무에는 준용되지 않아요. 불가분채무에서는 원칙적으로 <b>그 사람에게만</b> 효력이 있어요(제410조 준용).</div></div></div><div class="calc">예: 채권자가 A에게만 이행을 청구했어요.<br>연대채무라면 → 이행청구의 효력이 B에게도 미쳐요(제416조). B도 이행지체가 될 수 있어요.<br>불가분채무라면 → A에게만 효력이 있어요. B에게는 따로 청구해야 해요.</div><h6>불가분채권 (채권자가 여럿인 경우)</h6><ul><li>각 채권자는 <b>모든 채권자를 위하여</b> 전부의 이행을 청구할 수 있고, 채무자는 모든 채권자를 위하여 아무 채권자에게나 이행하면 돼요(제409조).</li><li>그 밖에 채권자 한 명에게 생긴 일은 다른 채권자에게 효력이 없어요(제410조 1항).</li><li>채권자 한 명이 채무자와 경개하거나 채무를 면제해 줘도, 다른 채권자는 여전히 전부를 청구할 수 있어요. 다만 그 한 명이 받을 몫은 채무자에게 돌려줘야 해요(제410조 2항).</li></ul><div class="tip"><b>시험 포인트</b> 원문의 “연대채무에 관한 규정 준수”는 “준용”이라는 뜻으로 읽으면 돼요(원문은 그대로 두었어요).</div></figure></details>
+</section>
+<section class="s" id="s3" data-imp="3"><h2><span class="no">③</span><span><span class="sm">(진정)</span>연대채무관계</span><span class="imp" title="중요도 3/3">★★★</span></h2>
+<h3 class="h-num">1. 의의</h3>
+<p class="ln d" style="--ind:6px">수인의 채무자가 <b>채무 전부를 각자 이행할 의무</b>가 있고, 채무자 1인의 이행으로 <b>다른 채무자도 그 의무를 면하게 되는 관계</b> <span class="sm">(</span><b class="kw"><span class="sm">제413조</span></b><span class="sm">, 한 마음 한 뜻으로 변제)</span></p>
+<details class="add dgw" open><summary><span class="addtag">도식</span>연대채무 — 누구에게나 전부, 갚은 뒤에는 부담부분만큼 구상 </summary><figure class="dg"><figcaption>도식 · 연대채무 — 누구에게나 전부, 갚은 뒤에는 부담부분만큼 구상 <span class="ex">금액·인물은 가상 예시</span></figcaption><p class="lead">A·B·C가 “연대하여 갚겠다”고 약정하고 9천만 원을 빌렸어요. 채권자는 셋 중 <b>누구에게나 9천만 원 전부</b>를 청구할 수 있어요. 한 사람이 다 갚으면 모두의 채무가 없어지고, 그 사람은 나머지에게 <b>각자의 부담부분</b>만큼 구상해요.</p><div class="relwrap"><svg class="relsvg" viewBox="0 0 330 205" role="img" aria-label="연대채무: 채권자는 각 연대채무자에게 전부를 청구할 수 있다"><defs><marker id="r5k" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm k"/></marker><marker id="r5m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm m"/></marker><marker id="r5y" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm y"/></marker><marker id="r5n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm n"/></marker><marker id="r5q" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="rm q"/></marker></defs><line x1="144.2" y1="63.0" x2="75.8" y2="145.0" class="re y" marker-end="url(#r5y)"/><line x1="165.0" y1="63.0" x2="165.0" y2="145.0" class="re y" marker-end="url(#r5y)"/><line x1="185.8" y1="63.0" x2="254.2" y2="145.0" class="re y" marker-end="url(#r5y)"/><rect x="115.2" y="16.0" width="99.5" height="44.0" rx="8" class="rn "/><text x="165" y="35" class="rt" text-anchor="middle">채권자</text><text x="165" y="52" class="rs" text-anchor="middle">9천만 원 대여</text><rect x="2.8" y="148.0" width="104.3" height="44.0" rx="8" class="rn "/><text x="55" y="167" class="rt" text-anchor="middle">A</text><text x="55" y="184" class="rs" text-anchor="middle">부담부분 3천만</text><rect x="112.8" y="148.0" width="104.3" height="44.0" rx="8" class="rn "/><text x="165" y="167" class="rt" text-anchor="middle">B</text><text x="165" y="184" class="rs" text-anchor="middle">부담부분 3천만</text><rect x="222.8" y="148.0" width="104.3" height="44.0" rx="8" class="rn "/><text x="275" y="167" class="rt" text-anchor="middle">C</text><text x="275" y="184" class="rs" text-anchor="middle">부담부분 3천만</text></svg><div class="rlg"><span class="lg lg-y"><i></i>청구 가능</span></div><p class="relcap">채권자는 A·B·C 누구에게나 9천만 원 전부를 청구할 수 있어요.</p></div><div class="calc">A가 9천만 원을 모두 갚으면 → B에게 3천만 원, C에게 3천만 원을 구상해요(제425조). 면책된 날 이후의 법정이자와 피할 수 없었던 비용도 함께 청구할 수 있어요.<br>부담부분은 따로 정하지 않았다면 <b>균등한 것으로 추정</b>해요(제424조).</div><div class="tip"><b>시험 포인트</b> 연대채무자는 갚기 전과 갚은 뒤에 다른 연대채무자에게 <b>알려야</b> 해요(사전·사후 통지, 제426조). 알리지 않으면 구상이 제한될 수 있어요.</div></figure></details>
+<details class="add sup "><summary><span class="addtag">보충</span>한 연대채무자에게 생긴 일이 다른 채무자에게 미치는 경우 (절대적 효력)</summary><div class="supbody"><p class="lead">연대채무에서는 아래 일들이 한 사람에게 생겨도 <b>다른 연대채무자에게 효력이 미쳐요</b>. 그 밖의 일은 그 사람에게만 효력이 있어요(제423조, 상대적 효력).</p><div class="tbl"><table><tr><td>이행청구 (제416조)</td><td>한 사람에게 청구하면 모두에게 청구한 효력이 있어요.</td></tr><tr><td>경개 (제417조)</td><td>한 사람이 채권자와 경개하면 채권은 모두를 위해 없어져요.</td></tr><tr><td>상계 (제418조)</td><td>한 사람이 상계하면 그만큼 모두의 채무가 없어져요. 상계할 채권이 있는 사람이 상계하지 않으면, 다른 채무자는 <b>그 사람의 부담부분 한도</b>에서 그 채권으로 상계할 수 있어요.</td></tr><tr><td>면제 (제419조)</td><td>한 사람을 면제하면 <b>그 사람의 부담부분만큼</b> 다른 채무자도 면해요.</td></tr><tr><td>혼동 (제420조)</td><td>한 사람과 채권자 사이에 혼동이 생기면 그 사람의 부담부분만큼 다른 채무자도 면해요.</td></tr><tr><td>소멸시효 (제421조)</td><td>한 사람의 시효가 완성되면 그 사람의 부담부분만큼 다른 채무자도 면해요.</td></tr><tr><td>채권자지체 (제422조)</td><td>한 사람에 대한 채권자지체는 모두에게 효력이 있어요.</td></tr></table></div><div class="calc">예: 9천만 원 연대채무, A·B·C 부담부분 3천만 원씩<br>채권자가 A를 면제하면 → B와 C는 A의 부담부분 3천만 원만큼 면해서, 각자 <b>6천만 원</b>까지만 책임져요.</div></div></details>
+<p class="ln d" style="--ind:6px"><u class="m">채무자의 수만큼 복수의 채무가 존재하는 것으로 본다.</u><u class="m"><span class="sm">(</span></u><u class="m"><b class="kw"><span class="sm">복수성</span></b></u><u class="m"><span class="sm">)</span></u><u class="m"> 또한, 각자의 채무는 독립되어 있다.</u><u class="m"><span class="sm">(</span></u><u class="m"><b class="kw"><span class="sm">독립성</span></b></u><u class="m"><span class="sm">)</span></u></p>
+<details class="add sup "><summary><span class="addtag">보충</span>연대채무와 부진정연대채무 비교 — 변시 빈출</summary><div class="supbody"><p><b>독립성</b>이란 연대채무자 각자의 채무가 따로따로라는 뜻이에요. 그래서 한 사람에 대한 법률행위의 무효·취소 원인은 다른 연대채무자의 채무에 영향을 미치지 않아요(제415조). 보증과 달리 주종관계가 없다는 점이 핵심이에요.</p><div class="two"><div class="panel a"><h5>연대채무</h5><div class="brk" style="margin-top:0">채무자들 사이에 “함께 갚자”는 주관적 공동관계가 있어요. 그래서 이행청구·면제·시효 등 여러 사유가 다른 채무자에게도 미치고(절대적 효력), 구상 전에 통지해야 해요.</div></div><div class="panel a"><h5>부진정연대채무</h5><div class="brk" style="margin-top:0">공동불법행위처럼 같은 손해를 각자 따로 책임지는 관계예요. 주관적 공동관계가 없어서, 채권자를 실제로 만족시킨 사유(변제·대물변제·공탁·상계)만 다른 채무자에게 미쳐요.</div></div></div><div class="case"><div class="ct">① 부진정연대채무자 한 명이 상계한 경우<span class="cno">대법원 2010. 9. 16. 선고 2008다97218 전원합의체 판결</span></div><div class="cr"><span class="ck">판단</span><div class="cv">부진정연대채무자 중 한 명이 자기 채권으로 상계하면, 그것은 변제처럼 채권자를 만족시킨 것이어서 <b>다른 부진정연대채무자에게도 효력</b>이 있어요(절대적 효력).</div></div><div class="cr"><span class="ck">의미</span><div class="cv">이 판결로 상계를 상대적 효력으로 보던 종전 판례가 변경됐어요.</div></div></div><div class="case"><div class="ct">② 부진정연대채무에 통지 규정을 유추할 수 있는지<span class="cno">대법원 1998. 6. 26. 선고 98다5777 판결</span></div><div class="cr"><span class="ck">판단</span><div class="cv">공동불법행위로 인한 손해배상채무처럼 부진정연대채무인 경우에는, 연대채무자 사이의 구상요건인 <b>통지 규정(제426조)을 유추 적용할 수 없어요</b>. 채무자들 사이에 출연을 나눠 부담한다는 주관적 연관관계가 없기 때문이에요.</div></div></div></div></details>
+</section>
+<details class="add sup sum "><summary><span class="addtag k">정리</span>수인의 채권·채무 사례를 풀 때 이 순서로 확인하세요</summary><div class="supbody"><h6>① 어떤 관계인지부터 정해요</h6><ul><li>특별한 의사표시가 없으면 <b>분할</b>이 원칙이에요(제408조). 금전채무 공동상속, 공동불법행위자들의 구상채무가 대표적이에요.</li><li>성질상 나눌 수 없거나 판례가 불가분으로 본 경우는 <b>불가분</b>이에요. 공동임대인(임대인 지위 공동상속 포함)의 보증금반환, 여럿이 함께 무단사용한 부당이득이 대표적이에요.</li><li>“연대하여” 약정했으면 <b>연대</b>, 공동불법행위처럼 같은 손해를 각자 책임지면 <b>부진정연대</b>예요.</li></ul><h6>② 채권자는 누구에게 얼마를 청구하나</h6><ul><li>분할이면 각자 자기 몫만, 나머지 셋은 누구에게나 전부를 청구할 수 있어요.</li><li>공유물 침해로 인한 손해배상·부당이득은 공유자가 자기 지분만큼만 청구해요. 반환·방해배제 같은 보존행위는 단독으로 전부 청구할 수 있어요.</li></ul><h6>③ 한 사람에게 생긴 일이 다른 사람에게도 미치나</h6><ul><li>연대채무: 이행청구·경개·상계·면제·혼동·시효·채권자지체는 미쳐요. 면제·혼동·시효는 그 사람의 부담부분만큼이에요.</li><li>불가분채무: 원칙적으로 미치지 않아요(이행청구도 그 사람에게만).</li><li>부진정연대: 변제·대물변제·공탁·상계처럼 채권자를 만족시킨 사유만 미쳐요.</li></ul><h6>④ 갚은 사람은 누구에게 얼마를 구상하나</h6><ul><li>연대·불가분: 부담부분만큼 구상하고, 통지(제426조)를 했는지 확인해요.</li><li>공동불법행위: 자기 부담부분을 넘어 배상해야 구상할 수 있고, 구상의무자들은 원칙적으로 분할채무예요. 배상한 사람에게 과실이 없으면 부진정연대예요.</li></ul></div></details>
+</div>
+
+<p class="foot">원문 정리본의 문장을 그대로 옮겼습니다. 도식은 판례 문장의 당사자와 결론을 그림으로 나타낸 보조 자료입니다.</p>
+</main>
+
+<script>
+(function(){
+  var body=document.body;
+  function bind(id,cls,key){
+    var b=document.getElementById(id);
+    function set(on){body.classList.toggle(cls,on);b.setAttribute('aria-pressed',on?'true':'false');
+      if(!on){document.querySelectorAll('.peek').forEach(function(e){e.classList.remove('peek')})}
+      try{localStorage.setItem(key,on?'1':'0')}catch(e){}}
+    var init=false;try{init=localStorage.getItem(key)==='1'}catch(e){}
+    set(init);
+    b.addEventListener('click',function(){set(!body.classList.contains(cls))});
+  }
+  bind('t-kw','hide-kw','hide-kw');
+  bind('t-u','hide-u','hide-u');
+  bind('t-pc','hide-pc','hide-pc');
+  document.addEventListener('click',function(e){
+    var kw=e.target.closest('b.kw');
+    if(kw&&body.classList.contains('hide-kw')&&!kw.classList.contains('peek')){kw.classList.add('peek');return}
+    var u=e.target.closest('u.m');
+    if(u&&body.classList.contains('hide-u')&&!u.classList.contains('peek')){u.classList.add('peek');return}
+    var pcb=e.target.closest('.pc .body');
+    if(pcb&&body.classList.contains('hide-pc'))pcb.classList.toggle('peek');
+  });
+  var fb=document.querySelectorAll('.flt button');
+  function filt(min){
+    fb.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.min==String(min)?'true':'false')});
+    document.querySelectorAll('section.s[data-imp]').forEach(function(s){s.classList.toggle('hide-imp',+s.dataset.imp<min)});
+    document.querySelectorAll('.ix-grid a[data-imp]').forEach(function(a){a.classList.toggle('hide-imp',+a.dataset.imp<min)});
+    document.querySelectorAll('.part').forEach(function(p){
+      var ss=p.querySelectorAll('section.s[data-imp]');
+      if(!ss.length)return;
+      var vis=[].some.call(ss,function(s){return !s.classList.contains('hide-imp')});
+      p.classList.toggle('hide-imp',!vis);
+    });
+    try{localStorage.setItem('imp-min',String(min))}catch(e){}
+  }
+  fb.forEach(function(b){b.addEventListener('click',function(){filt(+b.dataset.min)})});
+  var m=1;try{m=+(localStorage.getItem('imp-min')||1)}catch(e){}
+  filt(m||1);
+})();
+</script>
+<style>
+/* ---- 필기(펜) 레이어 · 이어 읽기 ---- */
+#ink-layer{position:absolute;left:0;top:0;pointer-events:none;z-index:4;overflow:visible}
+#ink-layer path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+body.ink-hidden #ink-layer{display:none}
+body.inking{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+body.inking.ink-finger main{touch-action:none}
+.ink-fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:8;
+  display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--paper);color:var(--ink);
+  border-radius:999px;padding:10px 16px;font:600 14px/1 var(--f-body);box-shadow:0 4px 16px rgba(0,0,0,.14);cursor:pointer}
+.ink-fab .dot{width:14px;height:14px;border-radius:50%;border:1px solid var(--line)}
+body.inking .ink-fab{display:none}
+.ink-bar{position:fixed;left:0;right:0;margin:0 auto;width:fit-content;bottom:max(12px,env(safe-area-inset-bottom));z-index:8;
+  display:none;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 10px;max-width:calc(100vw - 24px);
+  background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:8px 10px;
+  box-shadow:0 6px 24px rgba(0,0,0,.18);font:500 13px/1.2 var(--f-body)}
+body.inking .ink-bar{display:flex}
+.ink-bar .grp{display:flex;align-items:center;gap:4px}
+.ink-bar .sep{width:1px;align-self:stretch;background:var(--line)}
+.ink-bar button{font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:10px;
+  min-width:40px;min-height:40px;padding:0 10px;cursor:pointer}
+.ink-bar button[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:700}
+.ink-bar button:disabled{opacity:.4;cursor:default}
+.ink-bar .sw{min-width:30px;width:30px;height:30px;min-height:30px;padding:0;border-radius:50%;border:2px solid var(--paper);box-shadow:0 0 0 1px var(--line)}
+.ink-bar .sw[aria-pressed="true"]{box-shadow:0 0 0 2px var(--accent)}
+.ink-bar .sw.custom{position:relative;overflow:hidden;background:conic-gradient(red,yellow,lime,cyan,blue,magenta,red)}
+.ink-bar .sw.custom input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;border:0;padding:0}
+.ink-bar .size{display:flex;align-items:center;gap:8px}
+.ink-bar .size input{width:110px;accent-color:var(--accent)}
+.ink-bar .prev{width:30px;height:30px;display:flex;align-items:center;justify-content:center}
+.ink-bar .prev i{display:block;border-radius:50%;background:var(--ink)}
+.ink-bar .sizev{min-width:34px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.ink-bar .done{background:var(--accent);color:var(--paper);border-color:var(--accent);font-weight:700}
+.ink-more{position:fixed;z-index:9;right:max(12px,env(safe-area-inset-right));bottom:calc(max(12px,env(safe-area-inset-bottom)) + 120px);
+  display:none;flex-direction:column;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:10px;
+  box-shadow:0 6px 24px rgba(0,0,0,.18);font:500 13.5px/1.3 var(--f-body);color:var(--ink);min-width:220px}
+.ink-more.open{display:flex}
+.ink-more button{font:inherit;color:inherit;text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:40px;cursor:pointer}
+.ink-more button[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);font-weight:700}
+.ink-more button.danger{color:var(--no);border-color:var(--no)}
+.ink-more .stat{font-size:12px;color:var(--muted);padding:2px 4px}
+.ink-toast{position:fixed;left:0;right:0;margin:0 auto;width:fit-content;max-width:calc(100vw - 32px);white-space:nowrap;bottom:calc(max(16px,env(safe-area-inset-bottom)) + 60px);z-index:9;
+  background:var(--ink);color:var(--paper);border-radius:999px;padding:8px 8px 8px 16px;font:500 13.5px/1 var(--f-body);
+  display:flex;align-items:center;gap:10px;box-shadow:0 6px 20px rgba(0,0,0,.2);opacity:0;pointer-events:none;transition:opacity .25s}
+.ink-toast.show{opacity:1;pointer-events:auto}
+.ink-toast button{font:inherit;color:var(--ink);background:var(--paper);border:0;border-radius:999px;padding:7px 12px;cursor:pointer}
+@media (prefers-reduced-motion: reduce){.ink-toast{transition:none}}
+@media print{.ink-fab,.ink-bar,.ink-more,.ink-toast{display:none!important}}
+#ink-layer g.hl{mix-blend-mode:multiply}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) #ink-layer g.hl{mix-blend-mode:normal}}
+:root[data-theme="dark"] #ink-layer g.hl{mix-blend-mode:normal}
+</style>
+<script>
+(function(){
+'use strict';
+var LS_INK='ink-v1', LS_POS='read-pos-v1', LS_SET='ink-set-v1';
+function lsGet(k){try{var v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+var main=document.querySelector('main');
+if(!main)return;
+try{if('scrollRestoration' in history)history.scrollRestoration='manual'}catch(e){}
+var topbar=document.querySelector('.top');
+function topH(){return topbar?topbar.getBoundingClientRect().bottom:0}
+var UI='.ink-bar,.ink-more,.ink-fab,.ink-toast,.top';
+
+/* ---------- 문단 기준점(앵커) ---------- */
+var BLOCK='p,li,h1,h2,h3,h4,h5,h6,.pc,.ct,.cr,.panel,.box,.who,.tip,.lead,.calc,.q,.relwrap,td,th,dt,dd,summary,.st,.flow,.tl,figure,header.doc,details,section,.part';
+function hash(s){var h=5381;for(var i=0;i<s.length;i++){h=((h<<5)+h+s.charCodeAt(i))|0}return (h>>>0).toString(36)}
+var idx=null, keyOf=new WeakMap();
+function buildIndex(){
+  idx=new Map();var seen=Object.create(null);
+  var els=main.querySelectorAll(BLOCK);
+  for(var i=0;i<els.length;i++){
+    var e=els[i];
+    var t=(e.textContent||'').slice(0,240).replace(/\s+/g,'').slice(0,60);
+    var base=e.tagName.toLowerCase()+'.'+hash(t);
+    var n=seen[base]=(seen[base]||0)+1;
+    var k=base+'.'+n;idx.set(k,e);keyOf.set(e,k);
+  }
+}
+function visible(r){return r.width>0||r.height>0}
+function anchorAt(cx,cy){
+  var el=document.elementFromPoint(cx,cy);
+  var a=el&&el.closest?el.closest(BLOCK):null;
+  if(a&&!main.contains(a))a=null;
+  if(!a){
+    var cands=main.querySelectorAll('section.s,header.doc,.part,p.foot'),best=null,bd=1e9;
+    for(var i=0;i<cands.length;i++){
+      var r=cands[i].getBoundingClientRect();if(!visible(r))continue;
+      var d=cy<r.top?r.top-cy:(cy>r.bottom?cy-r.bottom:0);
+      if(d<bd){bd=d;best=cands[i]}
+    }
+    a=best;
+  }
+  return a&&keyOf.has(a)?a:null;
+}
+function sidOf(a){var s=a.closest('section.s[id]');return s?s.id:(a.closest('header.doc')?'hdr':'misc')}
+
+/* ---------- 상태 ---------- */
+var set=Object.assign({tool:'pen',pen:{c:'ink',s:3},hl:{c:'#ffd43b',s:16},er:{s:22},finger:false,hidden:false},lsGet(LS_SET)||{});
+function saveSet(){lsSet(LS_SET,{tool:set.tool,pen:set.pen,hl:set.hl,er:set.er,finger:set.finger,hidden:set.hidden})}
+var model={};             // sid -> [stroke]
+var undo=[],redo=[];
+var touched=false;        // 이번 방문에서 필기를 바꿨는지
+function allStrokes(){var out=[];for(var s in model)out=out.concat(model[s]);return out}
+function clean(st){return {id:st.id,k:st.k,w:st.w,t:st.t,c:st.c,s:st.s,p:st.p}}
+function newId(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
+
+/* ---------- 그리기 레이어 ---------- */
+var NS='http://www.w3.org/2000/svg';
+var layer=document.createElementNS(NS,'svg');
+layer.id='ink-layer';layer.setAttribute('width','1');layer.setAttribute('height','1');layer.setAttribute('aria-hidden','true');
+var gHl=document.createElementNS(NS,'g'),gPen=document.createElementNS(NS,'g');gHl.setAttribute('class','hl');
+layer.appendChild(gHl);layer.appendChild(gPen);
+document.body.appendChild(layer);
+function colorCss(c){return c==='ink'?'var(--ink)':c}
+function pathD(pts){
+  var n=pts.length/2;if(!n)return '';
+  if(n===1)return 'M'+pts[0].toFixed(1)+' '+pts[1].toFixed(1)+'l0.1 0';
+  var d='M'+pts[0].toFixed(1)+' '+pts[1].toFixed(1);
+  for(var i=1;i<n-1;i++){
+    var x=pts[2*i],y=pts[2*i+1],mx=(x+pts[2*i+2])/2,my=(y+pts[2*i+3])/2;
+    d+='Q'+x.toFixed(1)+' '+y.toFixed(1)+' '+mx.toFixed(1)+' '+my.toFixed(1);
+  }
+  return d+'L'+pts[2*n-2].toFixed(1)+' '+pts[2*n-1].toFixed(1);
+}
+function styleEl(el,st,sc){
+  el.style.stroke=colorCss(st.c);
+  el.style.strokeWidth=(st.s*(sc||1)).toFixed(2)+'px';
+  if(st.t==='hl'){el.style.strokeOpacity='0.38';el.style.strokeLinecap='butt'}
+}
+function place(st){
+  var a=idx.get(st.k);st._d=null;
+  if(!a)return false;
+  var r=a.getBoundingClientRect();if(!visible(r))return false;
+  var sc=st.w>0?r.width/st.w:1;
+  var ox=r.left+window.scrollX,oy=r.top+window.scrollY,d=new Array(st.p.length);
+  for(var i=0;i<st.p.length;i+=2){d[i]=ox+st.p[i]/2*sc;d[i+1]=oy+st.p[i+1]/2*sc}
+  st._d=d;st._sc=sc;return true;
+}
+function drawStroke(st){
+  if(!st._el){st._el=document.createElementNS(NS,'path');}
+  if(!place(st)){if(st._el.parentNode)st._el.parentNode.removeChild(st._el);return}
+  st._el.setAttribute('d',pathD(st._d));styleEl(st._el,st,st._sc);
+  var g=st.t==='hl'?gHl:gPen;if(st._el.parentNode!==g)g.appendChild(st._el);
+}
+function unDraw(st){if(st._el&&st._el.parentNode)st._el.parentNode.removeChild(st._el);st._d=null}
+var raf=0;
+function renderAll(){if(raf)return;raf=requestAnimationFrame(function(){raf=0;if(!idx)return;allStrokes().forEach(drawStroke)})}
+
+/* ---------- 저장 ---------- */
+var db=null,uid=null,dbOK=false,chunks={},dirty=new Set(),flushT=0,writing=Promise.resolve(),lsT=0;
+function saveLocal(){clearTimeout(lsT);lsT=setTimeout(function(){
+  var by={};for(var s in model){if(model[s].length)by[s]=model[s].map(clean)}
+  lsSet(LS_INK,{v:1,by:by,ts:Date.now()});
+},400)}
+function markDirty(sid){touched=true;dirty.add(sid);saveLocal();if(dbOK){clearTimeout(flushT);flushT=setTimeout(flush,1500)}}
+function flush(){
+  if(!dbOK)return;
+  var sids=Array.from(dirty);dirty.clear();
+  sids.forEach(function(sid){writing=writing.then(function(){return writeSid(sid)}).catch(onDbErr)});
+}
+function writeSid(sid){
+  var list=(model[sid]||[]).map(clean),parts=[],cur=[],size=0;
+  list.forEach(function(st){var n=JSON.stringify(st).length;if(size+n>180000&&cur.length){parts.push(cur);cur=[];size=0}cur.push(st);size+=n});
+  if(cur.length)parts.push(cur);
+  var col=db.collection('data/users/'+uid),prev=chunks[sid]||0,p=Promise.resolve();
+  parts.forEach(function(arr,i){p=p.then(function(){return col.doc(chunkId(sid,i)).set({sid:sid,strokes:arr,ts:Date.now()})})});
+  for(var j=parts.length;j<prev;j++){(function(j){p=p.then(function(){return col.doc(chunkId(sid,j)).delete()})})(j)}
+  return p.then(function(){chunks[sid]=parts.length;setStat()});
+}
+function chunkId(sid,i){return 'ink-'+sid+(i?'~'+(i+1):'')}
+function onDbErr(e){
+  if(e&&(e.code==='invalid_argument'||e.code==='revoked'||e.code==='not_granted'||e.code==='quota_exceeded')){dbOK=false;setStat()}
+}
+
+/* ---------- 읽던 위치 ---------- */
+var posT=0,posDbT=0,suppress=true,userMoved=false,lastPos=null;
+function curPos(){
+  var y=topH()+8,mr=main.getBoundingClientRect(),x=mr.left+Math.min(mr.width*0.3,160);
+  var el=document.elementFromPoint(x,y),a=el&&el.closest?el.closest(BLOCK):null;
+  var p={y:Math.round(window.scrollY),ts:Date.now()};
+  if(a&&main.contains(a)&&keyOf.has(a)){var r=a.getBoundingClientRect();p.k=keyOf.get(a);p.f=Math.max(0,Math.min(1,(y-r.top)/Math.max(1,r.height)))}
+  return p;
+}
+function savePos(){if(suppress||!idx)return;lastPos=curPos();lsSet(LS_POS,lastPos);
+  if(dbOK){clearTimeout(posDbT);posDbT=setTimeout(pushPos,4000)}}
+function pushPos(){if(!dbOK||!lastPos)return;var p=lastPos;writing=writing.then(function(){return db.doc('data/users/'+uid+'/state').set({pos:p})}).catch(onDbErr)}
+window.addEventListener('scroll',function(){clearTimeout(posT);posT=setTimeout(savePos,500)},{passive:true});
+['wheel','touchmove','keydown'].forEach(function(t){window.addEventListener(t,function(){if(!suppress)userMoved=true},{passive:true})});
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'){savePos();clearTimeout(posDbT);pushPos();clearTimeout(flushT);flush()}});
+window.addEventListener('pagehide',function(){savePos()});
+function jump(y){var h=document.documentElement,old=h.style.scrollBehavior;h.style.scrollBehavior='auto';window.scrollTo(0,y);h.style.scrollBehavior=old}
+function restore(p){
+  if(!p)return false;var y=null,a=p.k&&idx.get(p.k);
+  if(a){
+    var d=a.closest('details:not([open])');
+    while(d&&!document.body.classList.contains('orig-only')){d.open=true;d=d.parentElement&&d.parentElement.closest('details:not([open])')}
+    var r=a.getBoundingClientRect();
+    if(visible(r))y=r.top+window.scrollY+(p.f||0)*r.height-topH()-8;
+  }
+  if(y==null)y=p.y;if(y==null||y<160)return false;
+  jump(Math.max(0,Math.round(y)));return true;
+}
+var toast=document.createElement('div');toast.className='ink-toast';toast.setAttribute('role','status');
+toast.innerHTML='<span>읽던 곳에서 이어서 볼게요</span><button type="button">처음으로</button>';
+document.body.appendChild(toast);
+var toastT=0;
+function showToast(){toast.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){toast.classList.remove('show')},5000)}
+toast.querySelector('button').addEventListener('click',function(){jump(0);toast.classList.remove('show')});
+
+/* ---------- 도구 막대 ---------- */
+var PEN=['ink','#e03131','#1c7ed6','#2b8a3e','#f08c00','#7048e8'];
+var HL=['#ffd43b','#69db7c','#74c0fc','#faa2c1','#ffa94d'];
+var RANGE={pen:[1,24],hl:[6,48],er:[8,80]};
+var fab=document.createElement('button');fab.type='button';fab.className='ink-fab';fab.setAttribute('aria-label','필기 켜기');
+fab.innerHTML='<span class="dot"></span>필기';
+var bar=document.createElement('div');bar.className='ink-bar';bar.setAttribute('role','toolbar');bar.setAttribute('aria-label','필기 도구');
+bar.innerHTML=
+ '<div class="grp" data-g="tool"><button type="button" data-tool="pen">펜</button><button type="button" data-tool="hl">형광펜</button><button type="button" data-tool="er">지우개</button></div>'+
+ '<span class="sep"></span><div class="grp sws" aria-label="색"></div>'+
+ '<span class="sep sep2"></span><div class="size"><span class="prev"><i></i></span><input type="range" aria-label="펜촉 크기"><span class="sizev"></span></div>'+
+ '<span class="sep"></span><div class="grp"><button type="button" data-a="undo" aria-label="되돌리기">↶</button><button type="button" data-a="redo" aria-label="다시 실행">↷</button><button type="button" data-a="more" aria-label="필기 설정" aria-expanded="false">⋯</button><button type="button" class="done" data-a="done">완료</button></div>';
+var more=document.createElement('div');more.className='ink-more';more.setAttribute('role','dialog');more.setAttribute('aria-label','필기 설정');
+more.innerHTML='<button type="button" data-m="finger" aria-pressed="false">손가락으로도 쓰기</button>'+
+ '<button type="button" data-m="hide" aria-pressed="false">필기 숨기기</button>'+
+ '<button type="button" data-m="clear" class="danger">이 페이지 필기 모두 지우기</button>'+
+ '<div class="stat"></div>';
+document.body.appendChild(fab);document.body.appendChild(bar);document.body.appendChild(more);
+var sws=bar.querySelector('.sws'),range=bar.querySelector('input[type=range]'),prevI=bar.querySelector('.prev i'),sizev=bar.querySelector('.sizev');
+function curSet(){return set[set.tool]}
+function syncBar(){
+  bar.querySelectorAll('[data-tool]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.tool===set.tool?'true':'false')});
+  var t=set.tool,cs=t==='pen'?PEN:t==='hl'?HL:[];
+  sws.style.display=cs.length?'':'none';bar.querySelector('.sep2').style.display=cs.length?'':'none';
+  var cur=curSet().c,html='';
+  cs.forEach(function(c){html+='<button type="button" class="sw" data-c="'+c+'" aria-label="'+(c==='ink'?'기본 잉크':c)+'" aria-pressed="'+(c===cur)+'" style="background:'+colorCss(c)+'"></button>'});
+  var custom=cs.length&&cs.indexOf(cur)<0;
+  html+=cs.length?'<span class="sw custom" aria-pressed="'+custom+'" title="다른 색"'+(custom?' style="background:'+cur+'"':'')+'><input type="color" aria-label="다른 색 고르기" value="'+(cur&&cur[0]==='#'?cur:'#000000')+'"></span>':'';
+  sws.innerHTML=html;
+  var rg=RANGE[t];range.min=rg[0];range.max=rg[1];range.step=1;range.value=curSet().s;
+  var s=curSet().s,shown=Math.min(28,s);
+  prevI.style.width=prevI.style.height=shown+'px';
+  prevI.style.background=t==='er'?'transparent':colorCss(curSet().c);
+  prevI.style.border=t==='er'?'1.5px dashed var(--muted)':'0';
+  prevI.style.opacity=t==='hl'?'.45':'1';
+  sizev.textContent=s+'px';
+  fab.querySelector('.dot').style.background=colorCss(set.pen.c);
+  bar.querySelector('[data-a=undo]').disabled=!undo.length;
+  bar.querySelector('[data-a=redo]').disabled=!redo.length;
+  more.querySelector('[data-m=finger]').setAttribute('aria-pressed',set.finger?'true':'false');
+  more.querySelector('[data-m=hide]').setAttribute('aria-pressed',set.hidden?'true':'false');
+  document.body.classList.toggle('ink-finger',!!set.finger);
+  document.body.classList.toggle('ink-hidden',!!set.hidden);
+}
+var inking=false;
+function setInking(on){
+  inking=on;document.body.classList.toggle('inking',on);
+  if(on&&set.hidden){set.hidden=false;saveSet()}
+  if(!on){more.classList.remove('open');bar.querySelector('[data-a=more]').setAttribute('aria-expanded','false');clearTimeout(flushT);flush()}
+  syncBar();
+}
+fab.addEventListener('click',function(){setInking(true)});
+bar.addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;
+  if(b.dataset.tool){set.tool=b.dataset.tool;saveSet();syncBar();return}
+  if(b.dataset.c){curSet().c=b.dataset.c;saveSet();syncBar();return}
+  var a=b.dataset.a;
+  if(a==='undo')doUndo();else if(a==='redo')doRedo();
+  else if(a==='done')setInking(false);
+  else if(a==='more'){var o=!more.classList.contains('open');if(o)more.style.bottom=(window.innerHeight-bar.getBoundingClientRect().top+8)+'px';more.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false');resetClear()}
+});
+sws.addEventListener('input',function(e){if(e.target.type==='color'){curSet().c=e.target.value;saveSet();
+  var sp=e.target.parentNode;sp.style.background=e.target.value;sws.querySelectorAll('.sw').forEach(function(x){x.setAttribute('aria-pressed',x===sp?'true':'false')});
+  prevI.style.background=e.target.value;fab.querySelector('.dot').style.background=colorCss(set.pen.c)}});
+sws.addEventListener('change',function(e){if(e.target.type==='color')syncBar()});
+range.addEventListener('input',function(){curSet().s=+range.value;saveSet();
+  var s=curSet().s;prevI.style.width=prevI.style.height=Math.min(28,s)+'px';sizev.textContent=s+'px'});
+var clearArmed=false;
+function resetClear(){clearArmed=false;more.querySelector('[data-m=clear]').textContent='이 페이지 필기 모두 지우기'}
+more.addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;var m=b.dataset.m;
+  if(m==='finger'){set.finger=!set.finger;saveSet();syncBar()}
+  else if(m==='hide'){set.hidden=!set.hidden;saveSet();syncBar()}
+  else if(m==='clear'){
+    if(!clearArmed){clearArmed=true;b.textContent='한 번 더 누르면 모두 지워요';return}
+    resetClear();var all=allStrokes();if(!all.length)return;
+    all.forEach(unDraw);var sids=Object.keys(model);model={};
+    undo.push({a:'clear',s:all});redo=[];sids.forEach(markDirty);syncBar();
+  }
+});
+function setStat(){more.querySelector('.stat').textContent=dbOK?'필기와 읽던 위치가 계정에 저장돼요. 다른 기기에서도 이어져요.':'필기와 읽던 위치가 이 기기의 브라우저에 저장돼요.'}
+
+/* ---------- 실행취소 ---------- */
+function addS(list){list.forEach(function(st){var sid=st.sid||'misc';(model[sid]=model[sid]||[]).push(st);drawStroke(st);markDirty(sid)})}
+function remS(list){list.forEach(function(st){var sid=st.sid||'misc',arr=model[sid]||[],i=arr.indexOf(st);if(i>=0)arr.splice(i,1);unDraw(st);markDirty(sid)})}
+function doUndo(){var x=undo.pop();if(!x)return;if(x.a==='add')remS(x.s);else addS(x.s);redo.push(x);syncBar()}
+function doRedo(){var x=redo.pop();if(!x)return;if(x.a==='add')addS(x.s);else remS(x.s);undo.push(x);syncBar()}
+document.addEventListener('keydown',function(e){
+  if(!inking||!(e.metaKey||e.ctrlKey)||e.key.toLowerCase()!=='z')return;
+  e.preventDefault();if(e.shiftKey)doRedo();else doUndo();
+});
+
+/* ---------- 펜 입력 ---------- */
+var cur=null,erasing=null,livePath=null,liveRaf=0;
+function canDraw(e){
+  if(!inking||!idx)return false;
+  if(e.target&&e.target.closest&&e.target.closest(UI))return false;
+  if(e.pointerType==='pen')return true;
+  if(e.pointerType==='mouse')return e.button===0;
+  if(e.pointerType==='touch')return set.finger;
+  return false;
+}
+function stylusTouch(e){for(var i=0;i<e.changedTouches.length;i++){if(e.changedTouches[i].touchType==='stylus')return true}return false}
+function blockTouch(e){
+  if(!inking)return;if(e.target&&e.target.closest&&e.target.closest(UI))return;
+  if(set.finger||stylusTouch(e)||cur||erasing){if(e.cancelable)e.preventDefault()}
+}
+document.addEventListener('touchstart',blockTouch,{passive:false,capture:true});
+document.addEventListener('touchmove',blockTouch,{passive:false,capture:true});
+document.addEventListener('contextmenu',function(e){if(inking&&!(e.target.closest&&e.target.closest(UI)))e.preventDefault()},true);
+document.addEventListener('pointerdown',function(e){
+  if(!canDraw(e))return;
+  e.preventDefault();e.stopPropagation();
+  more.classList.remove('open');
+  if(set.tool==='er'||(e.buttons&32)){erasing={pid:e.pointerId,hit:[]};eraseAt(e.pageX,e.pageY);return}
+  var a=anchorAt(e.clientX,e.clientY);if(!a)return;
+  var r=a.getBoundingClientRect(),cs=curSet();
+  cur={pid:e.pointerId,ox:r.left+window.scrollX,oy:r.top+window.scrollY,
+       st:{id:newId(),k:keyOf.get(a),w:Math.round(r.width*10)/10,t:set.tool,c:cs.c,s:cs.s,p:[],sid:sidOf(a)},
+       pts:[],lx:null,ly:null};
+  livePath=document.createElementNS(NS,'path');styleEl(livePath,cur.st,1);
+  (cur.st.t==='hl'?gHl:gPen).appendChild(livePath);
+  addPt(e.pageX,e.pageY);
+},true);
+function addPt(x,y){
+  if(cur.lx!==null){var dx=x-cur.lx,dy=y-cur.ly;if(dx*dx+dy*dy<0.6)return}
+  cur.lx=x;cur.ly=y;cur.pts.push(x,y);
+  cur.st.p.push(Math.round((x-cur.ox)*2),Math.round((y-cur.oy)*2));
+  if(!liveRaf)liveRaf=requestAnimationFrame(function(){liveRaf=0;if(cur&&livePath)livePath.setAttribute('d',pathD(cur.pts))});
+}
+window.addEventListener('pointermove',function(e){
+  if(cur&&e.pointerId===cur.pid){
+    e.preventDefault();
+    var evs=e.getCoalescedEvents?e.getCoalescedEvents():null;if(!evs||!evs.length)evs=[e];
+    for(var i=0;i<evs.length;i++)addPt(evs[i].pageX,evs[i].pageY);
+  }else if(erasing&&e.pointerId===erasing.pid){
+    e.preventDefault();eraseAt(e.pageX,e.pageY);
+  }
+},{capture:true,passive:false});
+function endPtr(e){
+  if(cur&&e.pointerId===cur.pid){
+    var st=cur.st;cur=null;
+    if(livePath&&livePath.parentNode)livePath.parentNode.removeChild(livePath);livePath=null;
+    if(st.p.length){(model[st.sid]=model[st.sid]||[]).push(st);drawStroke(st);undo.push({a:'add',s:[st]});redo=[];markDirty(st.sid);syncBar()}
+  }else if(erasing&&e.pointerId===erasing.pid){
+    var hit=erasing.hit;erasing=null;
+    if(hit.length){undo.push({a:'erase',s:hit});redo=[];syncBar()}
+  }
+}
+window.addEventListener('pointerup',endPtr,true);
+window.addEventListener('pointercancel',endPtr,true);
+function eraseAt(x,y){
+  var rad=set.er.s/2;
+  for(var sid in model){
+    var arr=model[sid];
+    for(var i=arr.length-1;i>=0;i--){
+      var st=arr[i],d=st._d;if(!d)continue;
+      var pad=rad+st.s*(st._sc||1)/2,hit=false;
+      for(var j=0;j<d.length;j+=2){
+        var dx=d[j]-x,dy=d[j+1]-y;
+        if(dx*dx+dy*dy<=pad*pad){hit=true;break}
+        if(j+3<d.length){var sx=d[j+2]-d[j],sy=d[j+3]-d[j+1],L=sx*sx+sy*sy;
+          if(L>0){var t=((x-d[j])*sx+(y-d[j+1])*sy)/L;if(t>0&&t<1){var px=d[j]+t*sx-x,py=d[j+1]+t*sy-y;if(px*px+py*py<=pad*pad){hit=true;break}}}}
+      }
+      if(hit){arr.splice(i,1);unDraw(st);erasing.hit.push(st);markDirty(sid)}
+    }
+  }
+}
+
+/* ---------- 시작 ---------- */
+syncBar();setStat();
+function loadLocal(){
+  var L=lsGet(LS_INK);model={};
+  if(L&&L.by){for(var s in L.by){model[s]=L.by[s].map(function(st){st.sid=s;return st})}}
+}
+function boot(){
+  buildIndex();loadLocal();renderAll();
+  var local=lsGet(LS_POS),moved=false;
+  if(!location.hash)moved=restore(local);
+  if(moved)showToast();
+  setTimeout(function(){suppress=false},900);
+  if(window.ResizeObserver){new ResizeObserver(renderAll).observe(main)}
+  window.addEventListener('resize',renderAll);
+  document.addEventListener('toggle',renderAll,true);
+  connect(local);
+}
+function connect(local){
+  var C=window.claude;if(!C||typeof C.use!=='function')return;
+  Promise.all([C.use('db'),C.use('user')]).then(function(r){
+    db=r[0];var user=r[1];if(!db||!user)return null;
+    return Promise.resolve(user.id()).then(function(id){
+      if(!id)return null;uid=id;
+      return db.collection('data/users/'+uid).get();
+    });
+  }).then(function(snap){
+    if(!snap)return;
+    dbOK=true;
+    var remote={},have=false,pos=null;
+    snap.docs.forEach(function(d){
+      var b=d.data()||{};
+      if(d.id==='state'){pos=b.pos||null;return}
+      if(d.id.indexOf('ink-')!==0||!b.sid)return;
+      have=true;var m=/~(\d+)$/.exec(d.id),n=m?+m[1]:1;
+      chunks[b.sid]=Math.max(chunks[b.sid]||0,n);
+      (remote[b.sid]=remote[b.sid]||[]).push({n:n,s:b.strokes||[]});
+    });
+    if(have){
+      var byId={};
+      if(touched){allStrokes().forEach(function(st){byId[st.id]=st})}
+      allStrokes().forEach(unDraw);
+      var nm={};
+      for(var sid in remote){remote[sid].sort(function(a,b){return a.n-b.n});
+        nm[sid]=[];remote[sid].forEach(function(c){c.s.forEach(function(st){st.sid=sid;if(byId[st.id])delete byId[st.id];nm[sid].push(st)})})}
+      for(var id in byId){var st=byId[id];(nm[st.sid]=nm[st.sid]||[]).push(st);dirty.add(st.sid)}
+      model=nm;undo=[];redo=[];syncBar();renderAll();saveLocal();
+      if(dirty.size){clearTimeout(flushT);flushT=setTimeout(flush,800)}
+    }else{
+      for(var s in model){if(model[s].length)dirty.add(s)}
+      if(dirty.size){clearTimeout(flushT);flushT=setTimeout(flush,800)}
+    }
+    setStat();
+    if(pos&&!userMoved&&!location.hash&&(!local||pos.ts>(local.ts||0)+1000)){
+      suppress=true;if(restore(pos))showToast();lsSet(LS_POS,pos);setTimeout(function(){suppress=false},900);
+    }
+  }).catch(function(e){onDbErr(e);setStat()});
+}
+var started=false;
+function start(){if(started)return;started=true;boot()}
+function whenReady(){
+  var f=document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve();
+  var t=new Promise(function(r){setTimeout(r,1500)});
+  Promise.race([f,t]).then(function(){requestAnimationFrame(start)});
+}
+if(document.readyState==='complete')whenReady();else window.addEventListener('load',whenReady);
+})();
+
+</script>
+
+</body></html>
